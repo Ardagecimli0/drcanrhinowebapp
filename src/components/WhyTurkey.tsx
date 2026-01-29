@@ -27,36 +27,36 @@ const reasons = [
 
 export default function WhyTurkey() {
   return (
-    <section className="py-16 bg-gradient-to-b from-[#0c1015] to-[#151b23]">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-16 px-4 bg-gradient-to-b from-[#0c1015] to-[#151b23]">
+      <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Title and Image */}
-          <div className="text-center lg:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-              Why Choose Turkey<br />
-              for Your<br />
-              Rhinoplasty?
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#c9a96e] mb-8">
+              Why Choose Turkey for Your Rhinoplasty?
             </h2>
-            <Image
-              src="https://ext.same-assets.com/3003609744/2298182881.jpeg"
-              alt="Turkey Rhinoplasty"
-              width={400}
-              height={300}
-              className="rounded-xl mx-auto lg:mx-0"
-            />
+            <div className="overflow-hidden rounded-lg group cursor-pointer">
+              <Image
+                src="https://ext.same-assets.com/3003609744/3051920524.webp"
+                alt="Turkey Rhinoplasty"
+                width={500}
+                height={400}
+                className="w-full transition-transform duration-500 ease-out group-hover:scale-110"
+              />
+            </div>
           </div>
 
           {/* Right Side - Reasons */}
-          <div className="space-y-4">
+          <div className="space-y-6">
             {reasons.map((reason, index) => (
               <div
                 key={index}
-                className="bg-[#1c2530] rounded-xl p-6 border border-gray-700 card-hover"
+                className="bg-[#1c2530] rounded-xl p-6 border border-gray-700 hover:border-[#c9a96e] hover:scale-105 transition-all duration-300 ease-out cursor-pointer"
               >
-                <h3 className="text-[#c9a96e] font-semibold text-lg mb-2">
+                <h3 className="text-xl font-bold text-[#c9a96e] mb-2">
                   {reason.title}
                 </h3>
-                <p className="text-gray-400 text-sm">{reason.description}</p>
+                <p className="text-gray-300">{reason.description}</p>
               </div>
             ))}
           </div>

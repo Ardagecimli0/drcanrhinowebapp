@@ -5,6 +5,7 @@ import Stats from "@/components/Stats";
 import BeforeAfter from "@/components/BeforeAfter";
 import HospitalHotel from "@/components/HospitalHotel";
 import Testimonials from "@/components/Testimonials";
+import RhinoplastyBeforeAfterYT from "@/components/RhinoplastyBeforeAfterYT";
 import WhyTurkey from "@/components/WhyTurkey";
 import Packages from "@/components/Packages";
 import Techniques from "@/components/Techniques";
@@ -26,6 +27,7 @@ export default function Home() {
       <BeforeAfter />
       <HospitalHotel />
       <Testimonials />
+      <RhinoplastyBeforeAfterYT />
       <WhyTurkey />
       <Packages />
       <Techniques />

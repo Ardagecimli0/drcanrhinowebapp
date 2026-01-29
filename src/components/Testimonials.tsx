@@ -52,11 +52,11 @@ export default function Testimonials() {
           </div>
 
           {/* Right Side - Testimonial Cards */}
-          <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+          <div className="grid md:grid-cols-3 gap-4">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-72 bg-[#1c2530] rounded-xl p-6 border border-gray-700"
+                className="bg-[#1c2530] rounded-xl p-6 border border-gray-700 transition-all duration-300 hover:border-[#c9a96e] hover:shadow-lg hover:shadow-[#c9a96e]/10 cursor-pointer"
               >
                 <p className="text-gray-300 text-sm mb-4 line-clamp-6">
                   {testimonial.text}

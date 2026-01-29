@@ -32,16 +32,16 @@ export default function Techniques() {
           {techniques.map((technique, index) => (
             <div
               key={index}
-              className="text-center"
+              className="text-center group cursor-pointer"
             >
-              <div className="w-24 h-24 mx-auto mb-4 bg-[#1c2530] rounded-2xl flex items-center justify-center border border-gray-700 card-hover">
+              <div className="w-24 h-24 mx-auto mb-4 bg-[#1c2530] rounded-2xl flex items-center justify-center border border-gray-700 transition-all duration-300 group-hover:border-[#c9a96e] group-hover:shadow-lg group-hover:shadow-[#c9a96e]/20">
                 <img
                   src={technique.icon}
                   alt={technique.title}
-                  className="w-12 h-12 opacity-80"
+                  className="w-12 h-12 opacity-80 transition-all duration-300 group-hover:opacity-100 group-hover:brightness-125"
                 />
               </div>
-              <p className="text-white font-medium text-sm">{technique.title}</p>
+              <p className="text-white font-medium text-sm transition-colors duration-300 group-hover:text-[#c9a96e]">{technique.title}</p>
             </div>
           ))}
         </div>

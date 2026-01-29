@@ -10,7 +10,7 @@ export default function HospitalHotel() {
           {/* Hospital Card */}
           <div className="relative rounded-xl overflow-hidden card-hover">
             <Image
-              src="https://ext.same-assets.com/3003609744/3294974937.jpeg"
+              src="/images/hospital.jpg"
               alt="Kartal Kızılay Hospital"
               width={600}
               height={400}
@@ -34,7 +34,7 @@ export default function HospitalHotel() {
           {/* Hotel Card */}
           <div className="relative rounded-xl overflow-hidden card-hover">
             <Image
-              src="https://ext.same-assets.com/3003609744/703658160.jpeg"
+              src="/images/hotel.png"
               alt="Istanbul The Kailyn Hotel"
               width={600}
               height={400}
