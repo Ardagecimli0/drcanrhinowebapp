@@ -2,82 +2,14 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import * as Flags from "country-flag-icons/react/3x2";
-
-const countries = [
-  { code: "+90", iso: "TR", name: "Turkey" },
-  { code: "+1", iso: "US", name: "USA" },
-  { code: "+44", iso: "GB", name: "UK" },
-  { code: "+49", iso: "DE", name: "Germany" },
-  { code: "+33", iso: "FR", name: "France" },
-  { code: "+966", iso: "SA", name: "Saudi Arabia" },
-  { code: "+971", iso: "AE", name: "UAE" },
-  { code: "+91", iso: "IN", name: "India" },
-  { code: "+86", iso: "CN", name: "China" },
-  { code: "+81", iso: "JP", name: "Japan" },
-  { code: "+82", iso: "KR", name: "South Korea" },
-  { code: "+61", iso: "AU", name: "Australia" },
-  { code: "+55", iso: "BR", name: "Brazil" },
-  { code: "+7", iso: "RU", name: "Russia" },
-  { code: "+34", iso: "ES", name: "Spain" },
-  { code: "+39", iso: "IT", name: "Italy" },
-  { code: "+31", iso: "NL", name: "Netherlands" },
-  { code: "+46", iso: "SE", name: "Sweden" },
-  { code: "+47", iso: "NO", name: "Norway" },
-  { code: "+48", iso: "PL", name: "Poland" },
-  { code: "+43", iso: "AT", name: "Austria" },
-  { code: "+41", iso: "CH", name: "Switzerland" },
-  { code: "+32", iso: "BE", name: "Belgium" },
-  { code: "+30", iso: "GR", name: "Greece" },
-  { code: "+351", iso: "PT", name: "Portugal" },
-  { code: "+380", iso: "UA", name: "Ukraine" },
-  { code: "+20", iso: "EG", name: "Egypt" },
-  { code: "+212", iso: "MA", name: "Morocco" },
-  { code: "+234", iso: "NG", name: "Nigeria" },
-  { code: "+27", iso: "ZA", name: "South Africa" },
-  { code: "+92", iso: "PK", name: "Pakistan" },
-  { code: "+880", iso: "BD", name: "Bangladesh" },
-  { code: "+62", iso: "ID", name: "Indonesia" },
-  { code: "+60", iso: "MY", name: "Malaysia" },
-  { code: "+65", iso: "SG", name: "Singapore" },
-  { code: "+66", iso: "TH", name: "Thailand" },
-  { code: "+84", iso: "VN", name: "Vietnam" },
-  { code: "+63", iso: "PH", name: "Philippines" },
-  { code: "+98", iso: "IR", name: "Iran" },
-  { code: "+964", iso: "IQ", name: "Iraq" },
-  { code: "+972", iso: "IL", name: "Israel" },
-  { code: "+962", iso: "JO", name: "Jordan" },
-  { code: "+961", iso: "LB", name: "Lebanon" },
-  { code: "+974", iso: "QA", name: "Qatar" },
-  { code: "+965", iso: "KW", name: "Kuwait" },
-  { code: "+968", iso: "OM", name: "Oman" },
-  { code: "+973", iso: "BH", name: "Bahrain" },
-  { code: "+994", iso: "AZ", name: "Azerbaijan" },
-  { code: "+995", iso: "GE", name: "Georgia" },
-  { code: "+374", iso: "AM", name: "Armenia" },
-  { code: "+52", iso: "MX", name: "Mexico" },
-  { code: "+54", iso: "AR", name: "Argentina" },
-  { code: "+57", iso: "CO", name: "Colombia" },
-  { code: "+56", iso: "CL", name: "Chile" },
-  { code: "+51", iso: "PE", name: "Peru" },
-];
-
-// Flag component helper
-const FlagIcon = ({ iso, className }: { iso: string; className?: string }) => {
-  const FlagComponent = (Flags as Record<string, React.ComponentType<{ className?: string }>>)[iso];
-  if (FlagComponent) {
-    return <FlagComponent className={className || "h-4 w-6 rounded-sm"} />;
-  }
-  return <span className="text-lg">🏳️</span>;
-};
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 export default function Hero() {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    countryCode: "+90",
-  });
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [countryCode, setCountryCode] = useState("tr");
   const [isVisible, setIsVisible] = useState(false);
 
   // Animate on mount
@@ -85,18 +17,158 @@ export default function Hero() {
     setIsVisible(true);
   }, []);
 
-  const selectedCountry = countries.find(c => c.code === formData.countryCode) || countries[0];
+  // Auto-detect country from IP address
+  useEffect(() => {
+    const detectCountry = async () => {
+      try {
+        const response = await fetch("https://ipapi.co/json/");
+        const data = await response.json();
+        if (data.country_code) {
+          setCountryCode(data.country_code.toLowerCase());
+        }
+      } catch (error) {
+        console.error("Could not detect country:", error);
+        // Default to Turkey on error
+        setCountryCode("tr");
+      }
+    };
+    detectCountry();
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     window.open(
-      `https://api.whatsapp.com/send?phone=905467633630&text=Name: ${formData.name}, Phone: ${formData.countryCode}${formData.phone}, Email: ${formData.email}`,
+      `https://api.whatsapp.com/send?phone=905467633630&text=Name: ${name}, Phone: +${phone}, Email: ${email}`,
       "_blank"
     );
   };
 
   return (
     <section className="pt-24 pb-24 min-h-[85vh] relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #12171e 0%, #1a2028 50%, #12171e 100%)' }}>
+      {/* Custom styles for react-phone-input-2 */}
+      <style jsx global>{`
+        .hero-phone-input {
+          width: 100%;
+        }
+        
+        .hero-phone-input .form-control {
+          width: 100% !important;
+          height: 48px !important;
+          background-color: #0c1015 !important;
+          border: 1px solid #374151 !important;
+          border-radius: 8px !important;
+          color: white !important;
+          font-size: 16px !important;
+          padding-left: 48px !important;
+        }
+        
+        .hero-phone-input .form-control:focus {
+          border-color: #25D366 !important;
+          box-shadow: none !important;
+        }
+        
+        .hero-phone-input .form-control::placeholder {
+          color: #6b7280 !important;
+        }
+        
+        .hero-phone-input .flag-dropdown {
+          background-color: #0c1015 !important;
+          border: 1px solid #374151 !important;
+          border-right: none !important;
+          border-radius: 8px 0 0 8px !important;
+        }
+        
+        .hero-phone-input .flag-dropdown:hover,
+        .hero-phone-input .flag-dropdown:focus,
+        .hero-phone-input .flag-dropdown.open {
+          background-color: #1c2530 !important;
+        }
+        
+        .hero-phone-input .selected-flag {
+          background-color: transparent !important;
+          padding: 0 0 0 12px !important;
+          width: 42px !important;
+        }
+        
+        .hero-phone-input .selected-flag:hover,
+        .hero-phone-input .selected-flag:focus,
+        .hero-phone-input .selected-flag.open {
+          background-color: transparent !important;
+        }
+        
+        .hero-phone-input .selected-flag .flag {
+          transform: scale(1.2);
+        }
+        
+        .hero-phone-input .selected-flag .arrow {
+          border-top-color: #9ca3af !important;
+          left: 22px !important;
+        }
+        
+        .hero-phone-input .selected-flag .arrow.up {
+          border-bottom-color: #9ca3af !important;
+        }
+        
+        .hero-phone-input .country-list {
+          background-color: #1c2530 !important;
+          border: 1px solid #374151 !important;
+          border-radius: 8px !important;
+          margin-top: 4px !important;
+          max-height: 200px !important;
+        }
+        
+        .hero-phone-input .country-list .country {
+          color: white !important;
+          padding: 10px 12px !important;
+        }
+        
+        .hero-phone-input .country-list .country:hover,
+        .hero-phone-input .country-list .country.highlight {
+          background-color: #0c1015 !important;
+        }
+        
+        .hero-phone-input .country-list .country .dial-code {
+          color: #9ca3af !important;
+        }
+        
+        .hero-phone-input .country-list .search {
+          background-color: #0c1015 !important;
+          border-bottom: 1px solid #374151 !important;
+          padding: 10px !important;
+        }
+        
+        .hero-phone-input .country-list .search-box {
+          background-color: #1c2530 !important;
+          border: 1px solid #374151 !important;
+          border-radius: 6px !important;
+          color: white !important;
+          padding: 8px 12px !important;
+          width: 100% !important;
+        }
+        
+        .hero-phone-input .country-list .search-box::placeholder {
+          color: #6b7280 !important;
+        }
+        
+        .hero-phone-input .country-list::-webkit-scrollbar {
+          width: 6px;
+        }
+        
+        .hero-phone-input .country-list::-webkit-scrollbar-track {
+          background: #0c1015;
+          border-radius: 3px;
+        }
+        
+        .hero-phone-input .country-list::-webkit-scrollbar-thumb {
+          background: #374151;
+          border-radius: 3px;
+        }
+        
+        .hero-phone-input .country-list::-webkit-scrollbar-thumb:hover {
+          background: #4b5563;
+        }
+      `}</style>
+
       <div
         className={`max-w-7xl mx-auto px-4 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           }`}
@@ -201,44 +273,23 @@ export default function Hero() {
                   <input
                     type="text"
                     placeholder="Your Name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 rounded-lg bg-[#0c1015] border border-gray-700 text-white placeholder-gray-500 focus:border-[#25D366] focus:outline-none transition-colors"
                     required
                   />
                 </div>
 
-                <div className="flex gap-2">
-                  <div className="flex items-center gap-2 px-3 py-3 rounded-lg bg-[#0c1015] border border-gray-700 min-w-[100px]">
-                    <FlagIcon iso={selectedCountry.iso} />
-                    <select
-                      value={formData.countryCode}
-                      onChange={(e) => setFormData({ ...formData, countryCode: e.target.value })}
-                      className="bg-transparent text-white text-sm focus:outline-none cursor-pointer w-full"
-                    >
-                      {countries.map((country) => (
-                        <option key={country.code} value={country.code} className="bg-[#0c1015]">
-                          {country.code}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="relative flex-1">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                      </svg>
-                    </span>
-                    <input
-                      type="tel"
-                      placeholder="Your Phone"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full pl-10 pr-4 py-3 rounded-lg bg-[#0c1015] border border-gray-700 text-white placeholder-gray-500 focus:border-[#25D366] focus:outline-none transition-colors"
-                      required
-                    />
-                  </div>
-                </div>
+                {/* Phone Input with react-phone-input-2 */}
+                <PhoneInput
+                  country={countryCode}
+                  value={phone}
+                  onChange={(value) => setPhone(value)}
+                  placeholder="Your Phone"
+                  enableSearch={true}
+                  searchPlaceholder="Search country..."
+                  containerClass="hero-phone-input"
+                />
 
                 <div className="relative">
                   <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
@@ -250,8 +301,8 @@ export default function Hero() {
                   <input
                     type="email"
                     placeholder="Your Email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 rounded-lg bg-[#0c1015] border border-gray-700 text-white placeholder-gray-500 focus:border-[#25D366] focus:outline-none transition-colors"
                     required
                   />

@@ -53,7 +53,7 @@ export default function ContactForm() {
           border-radius: 8px !important;
           color: white !important;
           font-size: 16px !important;
-          padding-left: 90px !important;
+          padding-left: 48px !important;
         }
         
         .phone-input-container .form-control:focus {
@@ -80,8 +80,8 @@ export default function ContactForm() {
         
         .phone-input-container .selected-flag {
           background-color: transparent !important;
-          padding: 0 8px 0 12px !important;
-          width: 80px !important;
+          padding: 0 0 0 12px !important;
+          width: 42px !important;
         }
         
         .phone-input-container .selected-flag:hover,
@@ -96,7 +96,7 @@ export default function ContactForm() {
         
         .phone-input-container .selected-flag .arrow {
           border-top-color: #9ca3af !important;
-          left: 28px !important;
+          left: 22px !important;
         }
         
         .phone-input-container .selected-flag .arrow.up {
@@ -198,25 +198,15 @@ export default function ContactForm() {
                   </div>
 
                   {/* Phone Input with react-phone-input-2 */}
-                  <div className="relative">
-                    <div className="absolute left-[90px] top-1/2 -translate-y-1/2 text-gray-400 z-10">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                      </svg>
-                    </div>
-                    <PhoneInput
-                      country={countryCode}
-                      value={phone}
-                      onChange={(value) => setPhone(value)}
-                      placeholder="Your Phone"
-                      enableSearch={true}
-                      searchPlaceholder="Search country..."
-                      containerClass="phone-input-container"
-                      inputStyle={{
-                        paddingLeft: "120px",
-                      }}
-                    />
-                  </div>
+                  <PhoneInput
+                    country={countryCode}
+                    value={phone}
+                    onChange={(value) => setPhone(value)}
+                    placeholder="Your Phone"
+                    enableSearch={true}
+                    searchPlaceholder="Search country..."
+                    containerClass="phone-input-container"
+                  />
 
                   {/* Email Input */}
                   <div className="relative">
