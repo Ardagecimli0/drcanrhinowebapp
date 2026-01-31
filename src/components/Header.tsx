@@ -18,24 +18,24 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-all duration-300 ${isScrolled
-          ? 'bg-[#0c1015]/95 py-2'
-          : 'bg-[#0c1015]/70 py-4'
+        ? 'bg-[#0c1015]/95 py-2'
+        : 'bg-[#0c1015]/70 py-4'
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <Image
             src="https://ext.same-assets.com/3003609744/689426096.png"
             alt="Dr. Can Kalkavan Logo"
-            width={50}
-            height={50}
-            className={`transition-all duration-300 ${isScrolled ? 'h-10 w-auto' : 'h-14 w-auto'}`}
+            width={70}
+            height={70}
+            className={`transition-all duration-300 ${isScrolled ? 'h-12 w-auto' : 'h-16 w-auto'}`}
           />
           <div className={`hidden sm:block transition-all duration-300 ${isScrolled ? 'scale-90 origin-left' : 'scale-100'}`}>
-            <p className={`text-white font-medium transition-all duration-300 ${isScrolled ? 'text-xs' : 'text-sm'}`}>Op. Dr.</p>
-            <p className={`text-white font-bold transition-all duration-300 ${isScrolled ? 'text-base' : 'text-lg'}`}>Can Kalkavan</p>
-            <p className={`text-gray-400 transition-all duration-300 ${isScrolled ? 'text-[10px]' : 'text-xs'}`}>Ear Nose and Throat Specialist</p>
+            <p className={`text-white font-medium transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}>Op. Dr.</p>
+            <p className={`text-white font-bold transition-all duration-300 ${isScrolled ? 'text-lg' : 'text-xl'}`}>Can Kalkavan</p>
+            <p className={`text-gray-400 transition-all duration-300 ${isScrolled ? 'text-xs' : 'text-sm'}`}>Ear Nose and Throat Specialist</p>
           </div>
         </div>
 

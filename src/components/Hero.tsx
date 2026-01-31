@@ -208,35 +208,32 @@ export default function Hero() {
           </div>
 
           {/* Middle - Certification Badges */}
-          <div className="flex flex-col items-center gap-6 py-8">
+          <div className="flex flex-row lg:flex-col items-center justify-center gap-6 lg:gap-6 py-4 lg:py-6">
             {/* ASPS Logo */}
-            <div className="flex flex-col items-center">
-              <Image
-                src="/images/asps-logo.png"
-                alt="American Society of Plastic Surgeons"
-                width={80}
-                height={80}
-                className="h-16 w-auto object-contain"
-              />
-              <p className="text-gray-400 text-[10px] mt-1 text-center">AMERICAN SOCIETY OF<br />PLASTIC SURGEONS®</p>
-            </div>
+            <Image
+              src="/images/asps-logo.png"
+              alt="American Society of Plastic Surgeons"
+              width={160}
+              height={160}
+              className="h-14 lg:h-24 w-auto object-contain"
+            />
 
             {/* UEMS Logo */}
             <Image
               src="/images/uems-logo.png"
               alt="UEMS"
-              width={90}
-              height={90}
-              className="h-20 w-auto object-contain"
+              width={180}
+              height={180}
+              className="h-16 lg:h-28 w-auto object-contain"
             />
 
             {/* ISAPS Logo */}
             <Image
               src="/images/isaps-logo.png"
               alt="ISAPS"
-              width={120}
-              height={50}
-              className="h-10 w-auto object-contain"
+              width={180}
+              height={90}
+              className="h-14 lg:h-20 w-auto object-contain"
             />
           </div>
 
