@@ -2,19 +2,19 @@
 
 const techniques = [
   {
-    icon: "https://ext.same-assets.com/3003609744/1387892525.svg",
+    icon: "/images/techniques/closed.svg",
     title: "Open Rhinoplasty",
   },
   {
-    icon: "https://ext.same-assets.com/3003609744/498806080.svg",
+    icon: "/images/techniques/preservation.svg",
     title: "Piezo Technique",
   },
   {
-    icon: "https://ext.same-assets.com/3003609744/2001289443.svg",
+    icon: "/images/techniques/ultrasonic.svg",
     title: "Push-Down Technique",
   },
   {
-    icon: "https://ext.same-assets.com/3003609744/1028142092.svg",
+    icon: "/images/techniques/revision.svg",
     title: "Let-Down Technique",
   },
 ];

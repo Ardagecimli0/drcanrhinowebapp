@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Rhinoplasty in Turkey - Op. Dr. Can Kalkavan",
   description: "Rhinoplasty in Turkey with Op. Dr. Can Kalkavan. Get the best results with our experienced team. Starting from 2990€. Free consultation available.",
   icons: {
-    icon: "https://ext.same-assets.com/3003609744/894106509.ico",
+    icon: "/favicon.ico",
   },
 };
 

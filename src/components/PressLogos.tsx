@@ -3,12 +3,12 @@
 import Image from "next/image";
 
 const logos = [
-  { src: "https://ext.same-assets.com/3003609744/3218832420.svg", alt: "Elle Magazine" },
-  { src: "https://ext.same-assets.com/3003609744/2574735864.svg", alt: "Hello Magazine" },
-  { src: "https://ext.same-assets.com/3003609744/2280724684.svg", alt: "GQ Magazine" },
-  { src: "https://ext.same-assets.com/3003609744/1394845118.svg", alt: "CNN Turk" },
-  { src: "https://ext.same-assets.com/3003609744/3094805614.svg", alt: "Vogue Magazine" },
-  { src: "https://ext.same-assets.com/3003609744/630536926.svg", alt: "Elele Magazine" },
+  { src: "/images/press/elle.svg", alt: "Elle Magazine" },
+  { src: "/images/press/hello.svg", alt: "Hello Magazine" },
+  { src: "/images/press/gq.svg", alt: "GQ Magazine" },
+  { src: "/images/press/cnn-turk.svg", alt: "CNN Turk" },
+  { src: "/images/press/vogue.svg", alt: "Vogue Magazine" },
+  { src: "/images/press/elele.svg", alt: "Elele Magazine" },
 ];
 
 export default function PressLogos() {

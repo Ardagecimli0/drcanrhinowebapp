@@ -242,7 +242,7 @@ export default function ContactForm() {
               {/* Main Doctor Image */}
               <div className="absolute top-0 right-0 w-[280px] md:w-[320px] h-[350px] md:h-[400px] rounded-2xl overflow-hidden border-4 border-gray-700/50 shadow-2xl group cursor-pointer transition-all duration-300 hover:shadow-[#c9a96e]/20 hover:shadow-2xl">
                 <Image
-                  src="https://ext.same-assets.com/3003609744/2154221365.webp"
+                  src="/images/contact-form-bg.webp"
                   alt="Dr. Can Kalkavan"
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-110"

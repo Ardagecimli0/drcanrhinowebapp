@@ -2,22 +2,22 @@
 
 const stats = [
   {
-    icon: "https://ext.same-assets.com/3003609744/3138235119.svg",
+    icon: "/images/stats/operations.svg",
     value: "+20000",
     label: "Thousands of successful rhinoplasty procedures completed",
   },
   {
-    icon: "https://ext.same-assets.com/3003609744/771839588.svg",
+    icon: "/images/stats/years.svg",
     value: "30+",
     label: "Years of experience in rhinoplasty",
   },
   {
-    icon: "https://ext.same-assets.com/3003609744/651144950.svg",
+    icon: "/images/stats/countries.svg",
     value: "%95",
     label: "of Patients recommend Op. Dr. Can Kalkavan",
   },
   {
-    icon: "https://ext.same-assets.com/3003609744/835105621.svg",
+    icon: "/images/stats/satisfaction.svg",
     value: "%98",
     label: "Patient satisfaction rate after rhinoplasty procedures",
   },

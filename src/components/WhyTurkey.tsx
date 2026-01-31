@@ -37,7 +37,7 @@ export default function WhyTurkey() {
             </h2>
             <div className="overflow-hidden rounded-lg group cursor-pointer">
               <Image
-                src="https://ext.same-assets.com/3003609744/3051920524.webp"
+                src="/images/why-turkey.webp"
                 alt="Turkey Rhinoplasty"
                 width={500}
                 height={400}

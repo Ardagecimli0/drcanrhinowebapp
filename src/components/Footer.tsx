@@ -12,7 +12,7 @@ export default function Footer() {
             {/* Logo */}
             <div className="flex items-center gap-3 mb-6">
               <Image
-                src="https://ext.same-assets.com/3003609744/689426096.png"
+                src="/images/logo.png"
                 alt="Dr. Can Kalkavan Logo"
                 width={50}
                 height={50}
