@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { createContext, useContext, useState, useEffect, ReactNode, useCallback } from "react";
 import enRhino from "@/locales/en-rhino.json";
 import deRhino from "@/locales/de-rhino.json";
 import esRhino from "@/locales/es-rhino.json";
@@ -29,17 +29,17 @@ const translations: Record<string, TranslationData> = {
 
 // Ülke kodu -> Dil kodu haritası
 const countryToLocale: Record<string, string> = {
-    TR: "en", // Türkiye için İngilizce (tr dosyası yoksa)
+    TR: "en", // Türkiye için İngilizce
     DE: "de", // Almanya
     AT: "de", // Avusturya
-    CH: "de", // İsviçre (Almanca)
+    CH: "de", // İsviçre
     ES: "es", // İspanya
     MX: "es", // Meksika
     AR: "es", // Arjantin
     CO: "es", // Kolombiya
     FR: "fr", // Fransa
-    BE: "fr", // Belçika (Fransızca)
-    CA: "fr", // Kanada (Fransızca)
+    BE: "fr", // Belçika
+    CA: "fr", // Kanada
     IT: "it", // İtalya
     US: "en", // Amerika
     GB: "en", // İngiltere
@@ -54,7 +54,7 @@ function getNestedValue(obj: unknown, path: string): unknown {
         if (current && typeof current === "object" && key in current) {
             current = (current as Record<string, unknown>)[key];
         } else {
-            return path; // Return the key if not found
+            return path;
         }
     }
 
@@ -63,7 +63,6 @@ function getNestedValue(obj: unknown, path: string): unknown {
 
 export function I18nProvider({ children }: { children: ReactNode }) {
     const [locale, setLocale] = useState("en");
-    const [isLoading, setIsLoading] = useState(true);
 
     // IP'ye göre ülkeyi tespit et ve dili ayarla
     useEffect(() => {
@@ -79,36 +78,36 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
                 if (response.ok) {
                     const data = await response.json();
+                    console.log("Detected country:", data.country_code);
                     if (data.country_code) {
                         const detectedLocale = countryToLocale[data.country_code] || "en";
+                        console.log("Setting locale to:", detectedLocale);
                         setLocale(detectedLocale);
                     }
                 }
             } catch {
-                // Hata durumunda sessizce varsayılan değeri kullan
+                console.log("IP detection failed, using default locale");
                 setLocale("en");
-            } finally {
-                setIsLoading(false);
             }
         };
 
         detectCountryAndSetLocale();
     }, []);
 
-    const t = (key: string): string => {
+    const t = useCallback((key: string): string => {
         const value = getNestedValue(translations[locale] || translations.en, key);
         return typeof value === "string" ? value : key;
-    };
+    }, [locale]);
 
-    const tArray = <T,>(key: string): T[] => {
+    const tArray = useCallback(<T,>(key: string): T[] => {
         const value = getNestedValue(translations[locale] || translations.en, key);
         return Array.isArray(value) ? (value as T[]) : [];
-    };
+    }, [locale]);
 
-    const tObject = <T,>(key: string): T => {
+    const tObject = useCallback(<T,>(key: string): T => {
         const value = getNestedValue(translations[locale] || translations.en, key);
         return value as T;
-    };
+    }, [locale]);
 
     return (
         <I18nContext.Provider value={{ t, tArray, tObject, locale, setLocale }}>
