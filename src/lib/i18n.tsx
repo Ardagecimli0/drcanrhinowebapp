@@ -15,6 +15,7 @@ interface I18nContextType {
     tObject: <T>(key: string) => T;
     locale: string;
     setLocale: (locale: string) => void;
+    isReady: boolean;
 }
 
 const I18nContext = createContext < I18nContextType | undefined > (undefined);
@@ -29,21 +30,21 @@ const translations: Record<string, TranslationData> = {
 
 // Ülke kodu -> Dil kodu haritası
 const countryToLocale: Record<string, string> = {
-    TR: "en", // Türkiye için İngilizce
-    DE: "de", // Almanya
-    AT: "de", // Avusturya
-    CH: "de", // İsviçre
-    ES: "es", // İspanya
-    MX: "es", // Meksika
-    AR: "es", // Arjantin
-    CO: "es", // Kolombiya
-    FR: "fr", // Fransa
-    BE: "fr", // Belçika
-    CA: "fr", // Kanada
-    IT: "it", // İtalya
-    US: "en", // Amerika
-    GB: "en", // İngiltere
-    AU: "en", // Avustralya
+    TR: "en",
+    DE: "de",
+    AT: "de",
+    CH: "de",
+    ES: "es",
+    MX: "es",
+    AR: "es",
+    CO: "es",
+    FR: "fr",
+    BE: "fr",
+    CA: "fr",
+    IT: "it",
+    US: "en",
+    GB: "en",
+    AU: "en",
 };
 
 function getNestedValue(obj: unknown, path: string): unknown {
@@ -63,9 +64,18 @@ function getNestedValue(obj: unknown, path: string): unknown {
 
 export function I18nProvider({ children }: { children: ReactNode }) {
     const [locale, setLocale] = useState("en");
+    const [isReady, setIsReady] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
+
+    // Client-side mount kontrolü
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
 
     // IP'ye göre ülkeyi tespit et ve dili ayarla
     useEffect(() => {
+        if (!isMounted) return;
+
         const detectCountryAndSetLocale = async () => {
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 3000);
@@ -78,21 +88,20 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
                 if (response.ok) {
                     const data = await response.json();
-                    console.log("Detected country:", data.country_code);
                     if (data.country_code) {
                         const detectedLocale = countryToLocale[data.country_code] || "en";
-                        console.log("Setting locale to:", detectedLocale);
                         setLocale(detectedLocale);
                     }
                 }
             } catch {
-                console.log("IP detection failed, using default locale");
                 setLocale("en");
+            } finally {
+                setIsReady(true);
             }
         };
 
         detectCountryAndSetLocale();
-    }, []);
+    }, [isMounted]);
 
     const t = useCallback((key: string): string => {
         const value = getNestedValue(translations[locale] || translations.en, key);
@@ -109,8 +118,13 @@ export function I18nProvider({ children }: { children: ReactNode }) {
         return value as T;
     }, [locale]);
 
+    // Hydration uyumsuzluğunu önlemek için SSR'da ve locale hazır olmadan önce render etme
+    if (!isMounted) {
+        return null;
+    }
+
     return (
-        <I18nContext.Provider value={{ t, tArray, tObject, locale, setLocale }}>
+        <I18nContext.Provider value={{ t, tArray, tObject, locale, setLocale, isReady }}>
             {children}
         </I18nContext.Provider>
     );
