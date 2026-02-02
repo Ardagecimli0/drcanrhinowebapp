@@ -1,31 +1,17 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslation } from "@/lib/i18n";
 
-const reasons = [
-  {
-    title: "Affordable Prices:",
-    description:
-      "Turkey offers rhinoplasty at more competitive prices than many European countries, while maintaining high standards of medical care.",
-  },
-  {
-    title: "Geographic Advantage:",
-    description:
-      "With Istanbul as a global hub, patients can combine surgery with cultural experiences, making the journey both medical and touristic.",
-  },
-  {
-    title: "Advanced Techniques:",
-    description:
-      "Turkish surgeons are skilled in open, closed, and push-down & let-down rhinoplasty, achieving natural and functional results",
-  },
-  {
-    title: "Cutting-Edge Technology:",
-    description:
-      "Hospitals use 3D imaging, modern surgical tools, and innovative recovery methods, ensuring safe operations and faster healing.",
-  },
-];
+interface Reason {
+  title: string;
+  description: string;
+}
 
 export default function WhyTurkey() {
+  const { t, tArray } = useTranslation();
+  const reasons = tArray<Reason>("whyTurkey.reasons");
+
   return (
     <section className="py-16 px-4 bg-gradient-to-b from-[#0c1015] to-[#151b23]">
       <div className="max-w-7xl mx-auto">
@@ -33,7 +19,7 @@ export default function WhyTurkey() {
           {/* Left Side - Title and Image */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#c9a96e] mb-8">
-              Why Choose Turkey for Your Rhinoplasty?
+              {t("whyTurkey.title")}
             </h2>
             <div className="overflow-hidden rounded-lg group cursor-pointer">
               <Image

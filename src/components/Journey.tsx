@@ -1,42 +1,29 @@
 "use client";
 
-const journeyRows = [
-  // Row 1 - 3 items, centered
-  [
-    { name: "Online Consultation", position: "left" },
-    { name: "Arrival in Istanbul", position: "center" },
-    { name: "Preoperative Tests", position: "right" },
-  ],
-  // Row 2 - 3 items, slightly offset
-  [
-    { name: "Examination with Op. Dr. Can Kalkavan", position: "left" },
-    { name: "Operation Day Planning", position: "center" },
-    { name: "Operation", position: "right" },
-  ],
-  // Row 3 - 4 items
-  [
-    { name: "Postoperative Check Up", position: "left" },
-    { name: "Splint and Silicone Purchase", position: "center-left" },
-    { name: "Regular Check Ups", position: "center-right" },
-    { name: "Departure", position: "right" },
-  ],
-  // Row 4 - 1 item, centered
-  [
-    { name: "Confidence Renewed", position: "center" },
-  ],
-];
+import { useTranslation } from "@/lib/i18n";
 
 export default function Journey() {
+  const { t, tArray } = useTranslation();
+  const steps = tArray<string>("journey.steps");
+
+  // Group steps into rows for mobile layout
+  const journeyRows = [
+    steps.slice(0, 3),
+    steps.slice(3, 6),
+    steps.slice(6, 10),
+    steps.slice(10, 11),
+  ];
+
   return (
     <section className="py-16 bg-[#0c1015]">
       <div className="max-w-md mx-auto px-4 md:max-w-7xl">
         {/* Title */}
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-4xl font-bold text-white">
-            How Will Your
+            {t("journey.titleLine1")}
           </h2>
           <h3 className="text-2xl md:text-4xl font-bold text-[#c9a96e]">
-            Rhinoplasty Journey Go?
+            {t("journey.titleLine2")}
           </h3>
         </div>
 
@@ -46,9 +33,9 @@ export default function Journey() {
             <div
               key={rowIndex}
               className={`flex justify-center gap-4 ${rowIndex === 0 ? 'px-4' :
-                  rowIndex === 1 ? 'px-2' :
-                    rowIndex === 2 ? 'px-0' :
-                      'px-8'
+                rowIndex === 1 ? 'px-2' :
+                  rowIndex === 2 ? 'px-0' :
+                    'px-8'
                 }`}
             >
               {row.map((step, stepIndex) => (
@@ -63,7 +50,7 @@ export default function Journey() {
                   </div>
                   {/* Label */}
                   <p className="text-gray-400 text-xs leading-tight transition-colors duration-300 group-hover:text-[#c9a96e]">
-                    {step.name}
+                    {step}
                   </p>
                 </div>
               ))}
@@ -78,7 +65,7 @@ export default function Journey() {
 
           {/* Steps */}
           <div className="grid grid-cols-11 gap-4">
-            {journeyRows.flat().map((step, index) => (
+            {steps.map((step, index) => (
               <div key={index} className="text-center relative group cursor-pointer">
                 {/* Dot */}
                 <div className="w-4 h-4 rounded-full bg-[#c9a96e] mx-auto mb-3 relative z-10 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#c9a96e]/50 group-hover:scale-125">
@@ -86,7 +73,7 @@ export default function Journey() {
                 </div>
                 {/* Label */}
                 <p className="text-gray-400 text-xs leading-tight transition-colors duration-300 group-hover:text-[#c9a96e]">
-                  {step.name}
+                  {step}
                 </p>
               </div>
             ))}

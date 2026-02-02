@@ -1,0 +1,267 @@
+{
+    "common": {
+        "doctorName": "Op. Dr. Can Kalkavan",
+        "specialty": "Specialista in Otorinolaringoiatria",
+        "opDr": "Op. Dr.",
+        "freeConsultation": "Consulenza Gratuita",
+        "submit": "INVIA",
+        "whatsapp": "WhatsApp",
+        "or": "o",
+        "rhinoplasty": "Rinoplastica",
+        "patient": "Paziente"
+    },
+    "header": {
+        "contactUsNow": "Contattaci ora per una",
+        "rhinoplasty": "Rinoplastica!"
+    },
+    "hero": {
+        "title": "Rinoplastica in Turchia",
+        "startingFrom": "A partire da 2990€",
+        "consultationSubtitle": "Ottieni una consulenza personalizzata per la rinoplastica",
+        "namePlaceholder": "Il tuo Nome",
+        "phonePlaceholder": "Il tuo Telefono",
+        "emailPlaceholder": "La tua Email",
+        "searchCountry": "Cerca paese..."
+    },
+    "beforeAfter": {
+        "titleLine1": "Guarda queste incredibili",
+        "titleLine2": "Trasformazioni 'Prima e Dopo'!",
+        "description": "Esplora le trasformazioni naturali ottenute grazie all'esperienza dell'Op. Dr. Can Kalkavan.",
+        "previous": "Precedente",
+        "next": "Successivo",
+        "goToSlide": "Vai alla diapositiva"
+    },
+    "contactForm": {
+        "title": "Ottieni la tua Consulenza Gratuita",
+        "subtitle": "Compila il modulo e ti contatteremo a breve",
+        "namePlaceholder": "Il tuo Nome",
+        "phonePlaceholder": "Il tuo Telefono",
+        "emailPlaceholder": "La tua Email",
+        "searchCountry": "Cerca paese..."
+    },
+    "doctorInfo": {
+        "roles": [
+            {
+                "title": "Chirurgo",
+                "description": "Specialista in Otorinolaringoiatria"
+            },
+            {
+                "title": "Pittore - Scultore",
+                "description": "Pittura a olio, opere classiche e astratte..."
+            },
+            {
+                "title": "Autore",
+                "description": "Autore del libro d'arte su naso, seno e labbra, Elle, Vogue, CNNTurk"
+            }
+        ],
+        "planYourJourney": "Pianifica il tuo viaggio per la rinoplastica con"
+    },
+    "faq": {
+        "title": "Domande Frequenti",
+        "questions": [
+            {
+                "question": "Cos'è la rinoplastica?",
+                "answer": "La rinoplastica è una procedura chirurgica che rimodella o ripara il naso. Può essere eseguita per scopi estetici per migliorare l'aspetto del naso o per scopi funzionali per correggere problemi respiratori."
+            },
+            {
+                "question": "Sono un buon candidato per la rinoplastica?",
+                "answer": "I buoni candidati per la rinoplastica sono individui in buona salute generale, con aspettative realistiche sui risultati e che cercano un miglioramento nell'aspetto o nella funzione del proprio naso. Una consulenza con il Dr. Kalkavan aiuterà a determinare se sei un candidato idoneo."
+            },
+            {
+                "question": "Quanto dura l'intervento di rinoplastica?",
+                "answer": "L'intervento di rinoplastica dura in genere tra 1,5 e 3 ore, a seconda della complessità della procedura e delle tecniche utilizzate."
+            },
+            {
+                "question": "Quanto dura il periodo di recupero?",
+                "answer": "Il recupero iniziale richiede circa 1-2 settimane, durante le quali potresti riscontrare gonfiore ed ecchimosi. La maggior parte dei pazienti può tornare al lavoro dopo 7-10 giorni. I risultati completi sono visibili dopo 6-12 mesi, quando il gonfiore svanisce completamente."
+            },
+            {
+                "question": "Avrò cicatrici visibili dopo l'intervento?",
+                "answer": "Con la rinoplastica chiusa, tutte le incisioni vengono effettuate all'interno del naso, senza lasciare cicatrici visibili. La rinoplastica aperta comporta una piccola incisione sulla columella, che in genere guarisce diventando quasi invisibile."
+            },
+            {
+                "question": "Quanti interventi di rinoplastica ha eseguito il Dr. Can Kalkavan?",
+                "answer": "Il Dr. Can Kalkavan ha eseguito oltre 20.000 procedure di rinoplastica di successo con un tasso di soddisfazione dei pazienti del 98%."
+            }
+        ]
+    },
+    "footer": {
+        "description": "Chirurgo plastico certificato dall'European Board, specializzato in rinoplastica e chirurgia estetica. Specialista europeo in otorinolaringoiatria.",
+        "copyright": "Copyright © 2025 Op. Dr. Can Kalkavan - Tutti i diritti riservati",
+        "address": "Acıbadem mah. Çeçen sok, Akasya Avm NO:25 B1 blok Kat:7 D:89, 34674 Üsküdar/İstanbul"
+    },
+    "hospitalHotel": {
+        "hospital": "OSPEDALE",
+        "hotel": "HOTEL",
+        "hospitalTitle": "I nostri ospiti sono ospitati presso",
+        "hospitalName": "Ospedale Kartal Kızılay",
+        "hotelTitle": "I nostri ospiti soggiornano presso",
+        "hotelName": "Istanbul The Kailyn Hotel"
+    },
+    "journey": {
+        "titleLine1": "Come si svolgerà il tuo",
+        "titleLine2": "Viaggio per la Rinoplastica?",
+        "steps": [
+            "Consulenza Online",
+            "Arrivo a Istanbul",
+            "Esami Preoperatori",
+            "Visita con l'Op. Dr. Can Kalkavan",
+            "Pianificazione del Giorno dell'Intervento",
+            "Operazione",
+            "Controllo Postoperatorio",
+            "Acquisto di Tutore e Silicone",
+            "Controlli Regolari",
+            "Partenza",
+            "Fiducia Rinnovata"
+        ]
+    },
+    "packages": {
+        "title": "I NOSTRI PACCHETTI",
+        "getMoreInfo": "Ottieni più informazioni",
+        "openRhinoplasty": {
+            "title": "Rhinoplastica Aperta",
+            "features": [
+                "Fornisce un'ampia visione chirurgica",
+                "Efficace per casi complessi",
+                "Rimodellamento preciso della punta",
+                "Risultati duraturi",
+                "Corregge problemi funzionali",
+                "Riduce la necessità di revisione",
+                "Ottiene un aspetto naturale"
+            ]
+        },
+        "pushDownLetDown": {
+            "title": "Tecnica Push-Down & Let-Down",
+            "features": [
+                "Preserva il dorso nasale naturale",
+                "Intervento minimo su ossa e cartilagine",
+                "Minore trauma ai tessuti",
+                "Recupero più veloce e confortevole",
+                "Mantiene la linea naturale del ponte",
+                "Approccio moderno e innovativo",
+                "Fornisce risultati estetici naturali",
+                "Supporta la funzione respiratoria"
+            ]
+        },
+        "piezo": {
+            "title": "Tecnica Piezo",
+            "features": [
+                "Precisione ultrasonica",
+                "Trauma minimo ai tessuti",
+                "Riduzione delle ecchimosi",
+                "Minore gonfiore",
+                "Recupero più rapido",
+                "Maggiore sicurezza",
+                "Risultati prevedibili",
+                "Rimodellamento osseo delicato"
+            ]
+        }
+    },
+    "publications": {
+        "title": "Tecniche Chirurgiche Sviluppate Pubblicate nelle Più Prestigiose Riviste Internazionali",
+        "description": "Le tecniche avanzate rendono la rinoplastica più sicura, naturale e soddisfacente, aiutando i pazienti a raggiungere l'armonia facciale migliorando la qualità della respirazione."
+    },
+    "rhinoplastyBeforeAfterYT": {
+        "title": "Rinoplastica: Risultati Prima e Dopo",
+        "subtitle": "Esplora le trasformazioni naturali ottenute grazie all'esperienza di"
+    },
+    "stats": {
+        "operations": {
+            "value": "+20000",
+            "label": "Migliaia di procedure di rinoplastica completate con successo"
+        },
+        "years": {
+            "value": "30+",
+            "label": "Anni di esperienza nella rinoplastica"
+        },
+        "recommendation": {
+            "value": "95%",
+            "label": "dei pazienti consiglia l'Op. Dr. Can Kalkavan"
+        },
+        "satisfaction": {
+            "value": "98%",
+            "label": "Tasso di soddisfazione dei pazienti dopo le procedure di rinoplastica"
+        }
+    },
+    "techniques": {
+        "title": "Tecniche di Rinoplastica",
+        "items": [
+            "Rinoplastica Aperta",
+            "Tecnica Piezo",
+            "Tecnica Push-Down",
+            "Tecnica Let-Down"
+        ]
+    },
+    "testimonials": {
+        "titleLine1": "Storie di Trasformazione",
+        "titleLine2": "e Fiducia",
+        "titleLine3": "dei Pazienti",
+        "description": "Amiamo i nostri pazienti, ma non fidarti solo della nostra parola. Guarda cosa dicono di noi!",
+        "ctaButton": "Inizia a fare cambiamenti!",
+        "reviews": [
+            {
+                "text": "Ho fatto l'intervento al naso con l'Op. Dr. Can Kalkavan e sono più che soddisfatta del risultato. Grazie alla sua competenza, alle cure attente e all'approccio rassicurante prima e dopo l'intervento, mi sono sentita sicura e fiduciosa in ogni fase. Ha ascoltato attentamente i miei desideri, ha risposto pazientemente a tutte le mie domande e ha ottenuto un risultato naturale e perfettamente adatto al mio viso.",
+                "name": "Anna Müller",
+                "country": "DE"
+            },
+            {
+                "text": "Ho fatto la rinoplastica con l'Op. Dr. Can Kalkavan all'inizio di novembre 2024 e non potrei essere più felice della mia scelta. Questo è stato il mio primo intervento chirurgico in assoluto ed ero estremamente nervosa, ma sia il Dr. Kalkavan che il suo team hanno reso l'intero processo così fluido e rassicurante. La loro gentilezza, professionalità e attenzione sono state eccezionali dall'inizio alla fine.",
+                "name": "Hannah Schmidt",
+                "country": "DE"
+            },
+            {
+                "text": "Recentemente ho subito un intervento di rinoplastica e non potrei essere più felice dei risultati. L'Op. Dr. Can Kalkavan è un vero artista e una persona estremamente premurosa. Dal momento in cui sono entrata nel suo ufficio, sapevo di essere in buone mani. Il dottore e il suo staff sono stati incredibilmente professionali e amichevoli, facendomi sentire a mio agio durante l'intero processo.",
+                "name": "Emily Thompson",
+                "country": "UK"
+            }
+        ]
+    },
+    "whyDoctor": {
+        "titleLine1": "Perché Scegliere l'Op. Dr.",
+        "titleLine2": "Can Kalkavan per la",
+        "titleLine3": "Rhinoplastica?",
+        "features": [
+            {
+                "label": "Leadership:",
+                "text": "Guidato dall'Op. Dr. Can Kalkavan, Specialista Europeo in Otorinolaringoiatria"
+            },
+            {
+                "label": "Esperienza:",
+                "text": "Approcci di rinoplastica personalizzati progettati meticolosamente per armonizzarsi con la struttura facciale unica di ogni paziente"
+            },
+            {
+                "label": "Prestigio Scientifico:",
+                "text": "Le tecniche chirurgiche che ha introdotto nella rinoplastica sono state pubblicate nelle riviste internazionali più prestigiose al mondo, evidenziando il suo contributo alla letteratura medica globale e all'eccellenza accademica."
+            },
+            {
+                "label": "Tecnologia:",
+                "text": "Metodi chirurgici all'avanguardia che combinano innovazione e precisione, garantendo risultati naturali e funzionali"
+            },
+            {
+                "label": "Garanzia:",
+                "text": "Riconosciuto in tutto il mondo per il successo e la sicurezza, offrendo ai pazienti fiducia e tranquillità"
+            }
+        ]
+    },
+    "whyTurkey": {
+        "title": "Perché Scegliere la Turchia per la tua Rinoplastica?",
+        "reasons": [
+            {
+                "title": "Prezzi Convenienti:",
+                "description": "La Turchia offre la rinoplastica a prezzi più competitivi rispetto a molti paesi europei, pur mantenendo elevati standard di assistenza medica."
+            },
+            {
+                "title": "Vantaggio Geografico:",
+                "description": "Con Istanbul come hub globale, i pazienti possono combinare l'intervento chirurgico con esperienze culturali, rendendo il viaggio sia medico che turistico."
+            },
+            {
+                "title": "Tecniche Avanzate:",
+                "description": "I chirurghi turci sono esperti in rinoplastica aperta, chiusa e push-down & let-down, ottenendo risultati naturali e funzionali."
+            },
+            {
+                "title": "Tecnologia all'Avanguardia:",
+                "description": "Gli ospedali utilizzano l'imaging 3D, moderni strumenti chirurgici e metodi di recupero innovativi, garantendo operazioni sicure e una guarigione più rapida."
+            }
+        ]
+    }
+}

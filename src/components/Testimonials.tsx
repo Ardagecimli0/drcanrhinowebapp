@@ -1,30 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/lib/i18n";
 
-const testimonials = [
-  {
-    text: "I had my nose surgery with Op. Dr. Can Kalkavan and I am more than satisfied with the result. Thanks to his knowledge, attentive care, and reassuring approach before and after the surgery, I felt safe and confident at every step. He carefully listened to my wishes, patiently answered all my questions, and achieved a natural and perfectly fitting result for my face.",
-    name: "Anna Müller",
-    country: "DE",
-    rating: 5,
-  },
-  {
-    text: "I had my rhinoplasty done with Op. Dr. Can Kalkavan in early November 2024, and I couldn't be happier with my choice. This was my first-ever surgery, and I was extremely nervous, but both Dr. Kalkavan and his team made the entire process so smooth and reassuring. Their kindness, professionalism, and attentiveness were outstanding from start to finish.",
-    name: "Hannah Schmidt",
-    country: "DE",
-    rating: 5,
-  },
-  {
-    text: "I recently had a rhinoplasty surgery, and I couldn't be happier with the results. Op. Dr. Can Kalkavan is a true artist and an extremely caring individual. From the moment I walked into his office, I knew I was in good hands. The doctor and his staff were incredibly professional and friendly, making me feel comfortable and at ease throughout the entire process.",
-    name: "Emily Thompson",
-    country: "UK",
-    rating: 5,
-  },
-];
+interface Review {
+  text: string;
+  name: string;
+  country: string;
+}
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { t, tArray } = useTranslation();
+  const testimonials = tArray<Review>("testimonials.reviews");
 
   return (
     <section className="py-16 bg-[#0c1015]">
@@ -33,13 +21,12 @@ export default function Testimonials() {
           {/* Left Side - Title */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#c9a96e] mb-4">
-              Patient Stories of<br />
-              Transformation<br />
-              and Confidence
+              {t("testimonials.titleLine1")}<br />
+              {t("testimonials.titleLine2")}<br />
+              {t("testimonials.titleLine3")}
             </h2>
             <p className="text-gray-400 mb-6">
-              We love our patients, but don't just take our word for it. Take a
-              look at what they say about us!
+              {t("testimonials.description")}
             </p>
             <a
               href="https://api.whatsapp.com/send?phone=905467633630&text=What%20are%20the%20options%20and%20pricing%20for%20rhinoplasty"
@@ -47,7 +34,7 @@ export default function Testimonials() {
               rel="noopener noreferrer"
               className="inline-block btn-green px-8 py-4 rounded-full text-white font-semibold"
             >
-              Start Making Changes!
+              {t("testimonials.ctaButton")}
             </a>
           </div>
 
@@ -64,12 +51,12 @@ export default function Testimonials() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-white font-semibold text-sm">
-                      Patient: {testimonial.name}
+                      {t("common.patient")}: {testimonial.name}
                     </p>
                     <p className="text-gray-500 text-xs">{testimonial.country}</p>
                   </div>
                   <div className="flex text-yellow-400">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(5)].map((_, i) => (
                       <svg
                         key={i}
                         xmlns="http://www.w3.org/2000/svg"

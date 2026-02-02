@@ -1,0 +1,267 @@
+{
+    "common": {
+        "doctorName": "Op. Dr. Can Kalkavan",
+        "specialty": "Hals-Nasen-Ohren-Spezialist",
+        "opDr": "Op. Dr.",
+        "freeConsultation": "Kostenlose Beratung",
+        "submit": "ABSENDEN",
+        "whatsapp": "WhatsApp",
+        "or": "oder",
+        "rhinoplasty": "Nasenkorrektur",
+        "patient": "Patient"
+    },
+    "header": {
+        "contactUsNow": "Kontaktieren Sie uns jetzt für",
+        "rhinoplasty": "Nasenkorrektur!"
+    },
+    "hero": {
+        "title": "Nasenkorrektur in der Türkei",
+        "startingFrom": "Ab 2990€",
+        "consultationSubtitle": "Erhalten Sie eine persönliche Nasenkorrektur-Beratung",
+        "namePlaceholder": "Ihr Name",
+        "phonePlaceholder": "Ihre Telefonnummer",
+        "emailPlaceholder": "Ihre E-Mail",
+        "searchCountry": "Land suchen..."
+    },
+    "beforeAfter": {
+        "titleLine1": "Schauen Sie sich diese erstaunlichen",
+        "titleLine2": "'Vorher & Nachher' Transformationen an!",
+        "description": "Entdecken Sie die natürlichen Transformationen, die durch die Expertise von Op. Dr. Can Kalkavan erreicht wurden.",
+        "previous": "Zurück",
+        "next": "Weiter",
+        "goToSlide": "Gehe zu Folie"
+    },
+    "contactForm": {
+        "title": "Holen Sie sich Ihre kostenlose Beratung",
+        "subtitle": "Füllen Sie das Formular aus und wir werden Sie in Kürze kontaktieren",
+        "namePlaceholder": "Ihr Name",
+        "phonePlaceholder": "Ihre Telefonnummer",
+        "emailPlaceholder": "Ihre E-Mail",
+        "searchCountry": "Land suchen..."
+    },
+    "doctorInfo": {
+        "roles": [
+            {
+                "title": "Chirurg",
+                "description": "Hals-Nasen-Ohren-Spezialist"
+            },
+            {
+                "title": "Maler - Bildhauer",
+                "description": "Ölmalerei, klassische und abstrakte Werke..."
+            },
+            {
+                "title": "Autor",
+                "description": "Nasen-, Brust-, Lippenkunst-Buchautor, Elle, Vogue, CNNTurk"
+            }
+        ],
+        "planYourJourney": "Planen Sie Ihre Nasenkorrektur-Reise mit"
+    },
+    "faq": {
+        "title": "Häufig gestellte Fragen",
+        "questions": [
+            {
+                "question": "Was ist eine Nasenkorrektur?",
+                "answer": "Die Nasenkorrektur ist ein chirurgischer Eingriff zur Umformung oder Reparatur der Nase. Sie kann aus kosmetischen Gründen durchgeführt werden, um das Aussehen der Nase zu verbessern, oder aus funktionellen Gründen, um Atemprobleme zu korrigieren."
+            },
+            {
+                "question": "Bin ich ein guter Kandidat für eine Nasenkorrektur?",
+                "answer": "Gute Kandidaten für eine Nasenkorrektur sind Personen, die sich in einem guten allgemeinen Gesundheitszustand befinden, realistische Erwartungen an die Ergebnisse haben und eine Verbesserung des Aussehens oder der Funktion ihrer Nase anstreben. Eine Beratung mit Dr. Kalkavan wird helfen festzustellen, ob Sie ein geeigneter Kandidat sind."
+            },
+            {
+                "question": "Wie lange dauert die Nasenkorrektur-Operation?",
+                "answer": "Die Nasenkorrektur-Operation dauert in der Regel zwischen 1,5 und 3 Stunden, abhängig von der Komplexität des Eingriffs und den verwendeten Techniken."
+            },
+            {
+                "question": "Wie lange ist die Erholungszeit?",
+                "answer": "Die erste Erholung dauert etwa 1-2 Wochen, während derer Sie Schwellungen und Blutergüsse erleben können. Die meisten Patienten können nach 7-10 Tagen wieder zur Arbeit gehen. Die endgültigen Ergebnisse sind nach 6-12 Monaten sichtbar, wenn die Schwellung vollständig abgeklungen ist."
+            },
+            {
+                "question": "Werde ich nach der Operation sichtbare Narben haben?",
+                "answer": "Bei der geschlossenen Nasenkorrektur werden alle Schnitte im Inneren der Nase gemacht, so dass keine sichtbaren Narben entstehen. Die offene Nasenkorrektur beinhaltet einen kleinen Schnitt am Kolumella, der typischerweise so verheilt, dass er fast unsichtbar wird."
+            },
+            {
+                "question": "Wie viele Nasenkorrektur-Operationen hat Dr. Can Kalkavan durchgeführt?",
+                "answer": "Dr. Can Kalkavan hat über 20.000 erfolgreiche Nasenkorrektur-Eingriffe mit einer Patientenzufriedenheitsrate von 98% durchgeführt."
+            }
+        ]
+    },
+    "footer": {
+        "description": "European Board zertifizierter Plastischer Chirurg, spezialisiert auf Nasenkorrektur und Ästhetische Chirurgie. European Board Hals-Nasen-Ohren-Spezialist.",
+        "copyright": "Copyright © 2025 Op. Dr. Can Kalkavan - Alle Rechte vorbehalten",
+        "address": "Acıbadem mah. Çeçen sok, Akasya Avm NO:25 B1 blok Kat:7 D:89, 34674 Üsküdar/İstanbul"
+    },
+    "hospitalHotel": {
+        "hospital": "KRANKENHAUS",
+        "hotel": "HOTEL",
+        "hospitalTitle": "Unsere Gäste werden untergebracht in",
+        "hospitalName": "Kartal Kızılay Krankenhaus",
+        "hotelTitle": "Unsere Gäste übernachten im",
+        "hotelName": "Istanbul The Kailyn Hotel"
+    },
+    "journey": {
+        "titleLine1": "Wie wird Ihre",
+        "titleLine2": "Nasenkorrektur-Reise verlaufen?",
+        "steps": [
+            "Online-Beratung",
+            "Ankunft in Istanbul",
+            "Präoperative Tests",
+            "Untersuchung mit Op. Dr. Can Kalkavan",
+            "Operationstag-Planung",
+            "Operation",
+            "Postoperative Kontrolle",
+            "Schienen- und Silikonkauf",
+            "Regelmäßige Kontrollen",
+            "Abreise",
+            "Erneuertes Selbstvertrauen"
+        ]
+    },
+    "packages": {
+        "title": "UNSERE PAKETE",
+        "getMoreInfo": "Mehr Informationen erhalten",
+        "openRhinoplasty": {
+            "title": "Offene Nasenkorrektur",
+            "features": [
+                "Bietet weite chirurgische Sicht",
+                "Effektiv bei komplexen Fällen",
+                "Präzise Nasenspitzenformung",
+                "Lang anhaltende Ergebnisse",
+                "Korrigiert funktionelle Probleme",
+                "Reduziert den Bedarf für Revisionen",
+                "Erreicht natürliches Aussehen"
+            ]
+        },
+        "pushDownLetDown": {
+            "title": "Push-Down & Let-Down Technik",
+            "features": [
+                "Erhält den natürlichen Nasenrücken",
+                "Minimale Knochen- und Knorpelintervention",
+                "Weniger Gewebetrauma",
+                "Schnellere und komfortablere Genesung",
+                "Erhält die natürliche Brückenlinie",
+                "Moderner und innovativer Ansatz",
+                "Bietet natürliche ästhetische Ergebnisse",
+                "Unterstützt die Atemfunktion"
+            ]
+        },
+        "piezo": {
+            "title": "Piezo-Technik",
+            "features": [
+                "Ultraschall-Präzision",
+                "Minimales Gewebetrauma",
+                "Reduzierte Blutergüsse",
+                "Weniger Schwellung",
+                "Schnellere Erholung",
+                "Erhöhte Sicherheit",
+                "Vorhersagbare Ergebnisse",
+                "Sanfte Knochenumformung"
+            ]
+        }
+    },
+    "publications": {
+        "title": "Entwickelte chirurgische Techniken veröffentlicht in den renommiertesten internationalen Fachzeitschriften",
+        "description": "Fortschrittliche Techniken machen die Nasenkorrektur sicherer, natürlicher und zufriedenstellender und helfen Patienten, Gesichtsharmonie zu erreichen und gleichzeitig die Atemqualität zu verbessern."
+    },
+    "rhinoplastyBeforeAfterYT": {
+        "title": "Nasenkorrektur: Vorher & Nachher Ergebnisse",
+        "subtitle": "Entdecken Sie die natürlichen Transformationen, die durch die Expertise von"
+    },
+    "stats": {
+        "operations": {
+            "value": "+20000",
+            "label": "Tausende erfolgreiche Nasenkorrektur-Eingriffe durchgeführt"
+        },
+        "years": {
+            "value": "30+",
+            "label": "Jahre Erfahrung in der Nasenkorrektur"
+        },
+        "recommendation": {
+            "value": "%95",
+            "label": "der Patienten empfehlen Op. Dr. Can Kalkavan"
+        },
+        "satisfaction": {
+            "value": "%98",
+            "label": "Patientenzufriedenheitsrate nach Nasenkorrektur-Eingriffen"
+        }
+    },
+    "techniques": {
+        "title": "Nasenkorrektur-Techniken",
+        "items": [
+            "Offene Nasenkorrektur",
+            "Piezo-Technik",
+            "Push-Down-Technik",
+            "Let-Down-Technik"
+        ]
+    },
+    "testimonials": {
+        "titleLine1": "Patientengeschichten von",
+        "titleLine2": "Transformation",
+        "titleLine3": "und Selbstvertrauen",
+        "description": "Wir lieben unsere Patienten, aber verlassen Sie sich nicht nur auf unser Wort. Sehen Sie, was sie über uns sagen!",
+        "ctaButton": "Beginnen Sie mit Veränderungen!",
+        "reviews": [
+            {
+                "text": "Ich hatte meine Nasenoperation bei Op. Dr. Can Kalkavan und bin mehr als zufrieden mit dem Ergebnis. Dank seines Wissens, seiner aufmerksamen Betreuung und seines beruhigenden Ansatzes vor und nach der Operation fühlte ich mich bei jedem Schritt sicher und zuversichtlich. Er hörte aufmerksam auf meine Wünsche, beantwortete geduldig alle meine Fragen und erzielte ein natürliches und perfekt zu meinem Gesicht passendes Ergebnis.",
+                "name": "Anna Müller",
+                "country": "DE"
+            },
+            {
+                "text": "Ich hatte meine Nasenkorrektur Anfang November 2024 bei Op. Dr. Can Kalkavan durchführen lassen und könnte mit meiner Wahl nicht glücklicher sein. Dies war meine allererste Operation und ich war extrem nervös, aber sowohl Dr. Kalkavan als auch sein Team haben den gesamten Prozess so reibungslos und beruhigend gestaltet. Ihre Freundlichkeit, Professionalität und Aufmerksamkeit waren von Anfang bis Ende hervorragend.",
+                "name": "Hannah Schmidt",
+                "country": "DE"
+            },
+            {
+                "text": "Ich hatte kürzlich eine Nasenkorrektur und könnte mit den Ergebnissen nicht glücklicher sein. Op. Dr. Can Kalkavan ist ein wahrer Künstler und eine äußerst fürsorgliche Person. Von dem Moment an, als ich sein Büro betrat, wusste ich, dass ich in guten Händen bin. Der Arzt und sein Personal waren unglaublich professionell und freundlich und gaben mir während des gesamten Prozesses ein Gefühl von Komfort und Gelassenheit.",
+                "name": "Emily Thompson",
+                "country": "UK"
+            }
+        ]
+    },
+    "whyDoctor": {
+        "titleLine1": "Warum Op. Dr.",
+        "titleLine2": "Can Kalkavan für",
+        "titleLine3": "Ihre Nasenkorrektur wählen?",
+        "features": [
+            {
+                "label": "Führung:",
+                "text": "Geführt von Op. Dr. Can Kalkavan, European Board Hals-Nasen-Ohren-Spezialist"
+            },
+            {
+                "label": "Expertise:",
+                "text": "Personalisierte Nasenkorrektur-Ansätze, die sorgfältig darauf ausgelegt sind, mit der einzigartigen Gesichtsstruktur jedes Patienten zu harmonieren"
+            },
+            {
+                "label": "Wissenschaftliches Prestige:",
+                "text": "Die von ihm entwickelten chirurgischen Techniken für die Nasenkorrektur wurden in den renommiertesten internationalen Fachzeitschriften der Welt veröffentlicht und unterstreichen seinen Beitrag zur globalen medizinischen Literatur und akademischen Exzellenz."
+            },
+            {
+                "label": "Technologie:",
+                "text": "Modernste chirurgische Methoden, die Innovation mit Präzision kombinieren und natürliche und funktionelle Ergebnisse gewährleisten"
+            },
+            {
+                "label": "Garantie:",
+                "text": "Weltweit anerkannt für Erfolg und Sicherheit, bietet Patienten Vertrauen und Seelenfrieden"
+            }
+        ]
+    },
+    "whyTurkey": {
+        "title": "Warum die Türkei für Ihre Nasenkorrektur wählen?",
+        "reasons": [
+            {
+                "title": "Erschwingliche Preise:",
+                "description": "Die Türkei bietet Nasenkorrekturen zu wettbewerbsfähigeren Preisen als viele europäische Länder und hält dabei hohe Standards der medizinischen Versorgung aufrecht."
+            },
+            {
+                "title": "Geografischer Vorteil:",
+                "description": "Mit Istanbul als globalem Zentrum können Patienten die Operation mit kulturellen Erlebnissen kombinieren und die Reise sowohl medizinisch als auch touristisch gestalten."
+            },
+            {
+                "title": "Fortschrittliche Techniken:",
+                "description": "Türkische Chirurgen sind in offener, geschlossener und Push-Down & Let-Down Nasenkorrektur geschult und erzielen natürliche und funktionelle Ergebnisse"
+            },
+            {
+                "title": "Modernste Technologie:",
+                "description": "Krankenhäuser nutzen 3D-Bildgebung, moderne chirurgische Instrumente und innovative Erholungsmethoden, um sichere Operationen und schnellere Heilung zu gewährleisten."
+            }
+        ]
+    }
+}

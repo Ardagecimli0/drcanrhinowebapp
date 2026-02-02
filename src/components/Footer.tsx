@@ -1,8 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslation } from "@/lib/i18n";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="py-12 bg-[#0c1015] border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4">
@@ -19,19 +22,17 @@ export default function Footer() {
                 className="h-14 w-auto"
               />
               <div>
-                <p className="text-gray-300 text-sm">Op. Dr.</p>
+                <p className="text-gray-300 text-sm">{t("common.opDr")}</p>
                 <p className="text-white text-xl font-semibold italic" style={{ fontFamily: 'Georgia, serif' }}>Can Kalkavan</p>
-                <p className="text-gray-500 text-xs">Ear Nose and Throat Specialist</p>
+                <p className="text-gray-500 text-xs">{t("common.specialty")}</p>
               </div>
             </div>
 
             <p className="text-gray-400 text-sm mb-4 max-w-md">
-              European Board Certified Plastic Surgeon, specialized in
-              Rhinoplasty and Aesthetic Surgery. European Board Ear Nose and
-              Throat Specialist.
+              {t("footer.description")}
             </p>
             <p className="text-gray-500 text-sm">
-              Copyright © 2025 Op. Dr. Can Kalkavan - All Rights Reserved
+              {t("footer.copyright")}
             </p>
           </div>
 
@@ -44,7 +45,7 @@ export default function Footer() {
                 <circle cx="12" cy="10" r="3" />
               </svg>
               <p className="text-gray-400 text-sm">
-                Acıbadem mah. Çeçen sok, Akasya Avm NO:25 B1 blok Kat:7 D:89, 34674 Üsküdar/İstanbul
+                {t("footer.address")}
               </p>
             </div>
 

@@ -4,25 +4,34 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { useTranslation } from "@/lib/i18n";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [countryCode, setCountryCode] = useState("tr");
+  const { t } = useTranslation();
 
   // Auto-detect country from IP address
   useEffect(() => {
     const detectCountry = async () => {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 3000);
+
       try {
-        const response = await fetch("https://ipapi.co/json/");
-        const data = await response.json();
-        if (data.country_code) {
-          setCountryCode(data.country_code.toLowerCase());
+        const response = await fetch("https://ipapi.co/json/", {
+          signal: controller.signal
+        });
+        clearTimeout(timeoutId);
+
+        if (response.ok) {
+          const data = await response.json();
+          if (data.country_code) {
+            setCountryCode(data.country_code.toLowerCase());
+          }
         }
-      } catch (error) {
-        console.error("Could not detect country:", error);
-        // Default to Turkey on error
+      } catch {
         setCountryCode("tr");
       }
     };
@@ -170,10 +179,10 @@ export default function ContactForm() {
             {/* Left Side - Form */}
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                Get Your Free Consultation
+                {t("contactForm.title")}
               </h2>
               <p className="text-gray-400 mb-8 text-sm">
-                Fill out the form and we'll contact you shortly
+                {t("contactForm.subtitle")}
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -189,7 +198,7 @@ export default function ContactForm() {
                     </div>
                     <input
                       type="text"
-                      placeholder="Your Name"
+                      placeholder={t("contactForm.namePlaceholder")}
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       className="w-full pl-12 pr-4 py-3 rounded-lg bg-[#0c1015] border border-gray-700 text-white placeholder-gray-500 focus:border-[#25D366] focus:outline-none transition-colors"
@@ -202,9 +211,9 @@ export default function ContactForm() {
                     country={countryCode}
                     value={phone}
                     onChange={(value) => setPhone(value)}
-                    placeholder="Your Phone"
+                    placeholder={t("contactForm.phonePlaceholder")}
                     enableSearch={true}
-                    searchPlaceholder="Search country..."
+                    searchPlaceholder={t("contactForm.searchCountry")}
                     containerClass="phone-input-container"
                   />
 
@@ -218,7 +227,7 @@ export default function ContactForm() {
                     </div>
                     <input
                       type="email"
-                      placeholder="Your Email"
+                      placeholder={t("contactForm.emailPlaceholder")}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       className="w-full pl-12 pr-4 py-3 rounded-lg bg-[#0c1015] border border-gray-700 text-white placeholder-gray-500 focus:border-[#25D366] focus:outline-none transition-colors"
@@ -231,7 +240,7 @@ export default function ContactForm() {
                     type="submit"
                     className="w-full bg-[#25D366] hover:bg-[#20BD5A] py-4 rounded-lg text-white font-bold text-lg transition-colors"
                   >
-                    SUBMIT
+                    {t("common.submit")}
                   </button>
                 </div>
               </form>
