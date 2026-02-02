@@ -263,5 +263,11 @@
                 "description": "Gli ospedali utilizzano l'imaging 3D, moderni strumenti chirurgici e metodi di recupero innovativi, garantendo operazioni sicure e una guarigione più rapida."
             }
         ]
+    },
+    "cookieConsent": {
+        "title": "Gestisci consenso",
+        "description": "Per offrire le migliori esperienze, utilizziamo tecnologie come i cookie per memorizzare e/o accedere alle informazioni del dispositivo. Il consenso a queste tecnologie ci permetterà di elaborare dati come il comportamento di navigazione o gli identificatori unici su questo sito. Non acconsentire o revocare il consenso può influire negativamente su alcune caratteristiche e funzioni.",
+        "accept": "Accetta",
+        "viewPreferences": "Visualizza preferenze"
     }
 }

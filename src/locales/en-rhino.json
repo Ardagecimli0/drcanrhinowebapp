@@ -263,5 +263,11 @@
                 "description": "Hospitals use 3D imaging, modern surgical tools, and innovative recovery methods, ensuring safe operations and faster healing."
             }
         ]
+    },
+    "cookieConsent": {
+        "title": "Manage Consent",
+        "description": "To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site. Not consenting or withdrawing consent, may adversely affect certain features and functions.",
+        "accept": "Accept",
+        "viewPreferences": "View preferences"
     }
 }

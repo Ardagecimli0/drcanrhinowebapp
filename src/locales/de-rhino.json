@@ -263,5 +263,11 @@
                 "description": "Krankenhäuser nutzen 3D-Bildgebung, moderne chirurgische Instrumente und innovative Erholungsmethoden, um sichere Operationen und schnellere Heilung zu gewährleisten."
             }
         ]
+    },
+    "cookieConsent": {
+        "title": "Einwilligung verwalten",
+        "description": "Um die besten Erfahrungen zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Die Zustimmung zu diesen Technologien ermöglicht es uns, Daten wie das Surfverhalten oder eindeutige IDs auf dieser Website zu verarbeiten. Wenn Sie nicht zustimmen oder Ihre Zustimmung widerrufen, kann dies bestimmte Funktionen beeinträchtigen.",
+        "accept": "Akzeptieren",
+        "viewPreferences": "Einstellungen anzeigen"
     }
 }

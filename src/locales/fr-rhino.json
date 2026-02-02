@@ -263,5 +263,11 @@
                 "description": "Les hôpitaux utilisent l'imagerie 3D, des outils chirurgicaux modernes et des méthodes de récupération innovantes, garantissant des opérations sûres et une guérison plus rapide."
             }
         ]
+    },
+    "cookieConsent": {
+        "title": "Gérer le consentement",
+        "description": "Pour offrir les meilleures expériences, nous utilisons des technologies comme les cookies pour stocker et/ou accéder aux informations de l'appareil. Le consentement à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les identifiants uniques sur ce site. Ne pas consentir ou retirer son consentement peut affecter négativement certaines caractéristiques et fonctions.",
+        "accept": "Accepter",
+        "viewPreferences": "Voir les préférences"
     }
 }
