@@ -269,5 +269,10 @@
         "description": "Um die besten Erfahrungen zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Die Zustimmung zu diesen Technologien ermöglicht es uns, Daten wie das Surfverhalten oder eindeutige IDs auf dieser Website zu verarbeiten. Wenn Sie nicht zustimmen oder Ihre Zustimmung widerrufen, kann dies bestimmte Funktionen beeinträchtigen.",
         "accept": "Akzeptieren",
         "viewPreferences": "Einstellungen anzeigen"
+    },
+    "thankYou": {
+        "title": "Vielen Dank!",
+        "message": "Ihr Formular wurde erfolgreich übermittelt.",
+        "backToHome": "Zurück zur Startseite"
     }
 }

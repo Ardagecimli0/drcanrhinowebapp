@@ -269,5 +269,10 @@
         "description": "Para ofrecer las mejores experiencias, utilizamos tecnologías como cookies para almacenar y/o acceder a la información del dispositivo. El consentimiento a estas tecnologías nos permitirá procesar datos como el comportamiento de navegación o las identificaciones únicas en este sitio. No consentir o retirar el consentimiento puede afectar negativamente a ciertas características y funciones.",
         "accept": "Aceptar",
         "viewPreferences": "Ver preferencias"
+    },
+    "thankYou": {
+        "title": "¡Gracias!",
+        "message": "Su formulario ha sido enviado con éxito.",
+        "backToHome": "Volver al Inicio"
     }
 }

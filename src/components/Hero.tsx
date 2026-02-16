@@ -12,7 +12,7 @@ export default function Hero() {
   const [email, setEmail] = useState("");
   const [countryCode, setCountryCode] = useState("tr");
   const [isVisible, setIsVisible] = useState(false);
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
 
   // Animate on mount
   useEffect(() => {
@@ -45,12 +45,55 @@ export default function Hero() {
     detectCountry();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    window.open(
-      `https://api.whatsapp.com/send?phone=905467633630&text=Name: ${name}, Phone: +${phone}, Email: ${email}`,
-      "_blank"
-    );
+
+    // Prepare the data to send to the API
+    const slug = locale;
+    const payload = {
+      name: name,
+      phone: `${countryCode}${phone}`,
+      email: email,
+      lead_source: "Google/Web Form",
+      language: locale.toUpperCase(),
+      source_language: locale.toUpperCase(),
+      ip: "",
+      doctor: "Dr. Can Kalkavan",
+      interest: ["Rhinoplasty"],
+      procedure: [],
+      utm_source: "",
+      utm_medium: "",
+      utm_keyword: "",
+      utm_matchtype: "",
+      utm_network: "",
+      gclid: "",
+    };
+
+    console.log("Sending to Zoho:", payload);
+
+    try {
+      // Submit the form data to the API
+      const response = await fetch(`https://cevre.hotelistan.net/api/form-patient`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      console.log("Zoho response status:", response.status);
+
+      if (!response.ok) {
+        throw new Error(`API returned status: ${response.status}`);
+      }
+
+      // Redirect to thank you page with localized URL
+      window.location.href = `/${slug}/thank-you`;
+    } catch (error) {
+      console.error("API isteği başarısız:", error);
+      // Optionally show an error message to the user
+      alert("There was an error submitting your form. Please try again.");
+    }
   };
 
   return (
