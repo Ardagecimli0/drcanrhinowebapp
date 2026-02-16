@@ -10,6 +10,7 @@ export function generateStaticParams() {
     ];
 }
 
-export default function ThankYouPage({ params }: { params: { slug: string } }) {
-    return <ThankYouClient slug={params.slug} />;
+export default async function ThankYouPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    return <ThankYouClient slug={slug} />;
 }
