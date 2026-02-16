@@ -2,41 +2,37 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
+import { fetchCountryByIP, countryToDialCode, countryNames } from "@/lib/getIp";
+import * as Flags from 'country-flag-icons/react/3x2';
 import { useTranslation } from "@/lib/i18n";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  const [countryCode, setCountryCode] = useState("tr");
+  const [countryCode, setCountryCode] = useState("+90");
+  const [selectedIso, setSelectedIso] = useState("TR");
   const { t, locale } = useTranslation();
 
   // Auto-detect country from IP address
   useEffect(() => {
-    const detectCountry = async () => {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 3000);
-
-      try {
-        const response = await fetch("http://ip-api.com/json/?fields=countryCode", {
-          signal: controller.signal
-        });
-        clearTimeout(timeoutId);
-
-        if (response.ok) {
-          const data = await response.json();
-          if (data.countryCode) {
-            setCountryCode(data.countryCode.toLowerCase());
-          }
-        }
-      } catch {
-        setCountryCode("tr");
+    const initCountry = async () => {
+      const result = await fetchCountryByIP();
+      if (result) {
+        setCountryCode(result.dialCode);
+        setSelectedIso(result.countryCode);
       }
     };
-    detectCountry();
+    initCountry();
   }, []);
+
+  const handleCountryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newIso = e.target.value;
+    setSelectedIso(newIso);
+    if (countryToDialCode[newIso]) {
+      setCountryCode(countryToDialCode[newIso]);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -92,128 +88,7 @@ export default function ContactForm() {
   return (
     <section className="py-16 bg-[#0c1015]">
       {/* Custom styles for react-phone-input-2 */}
-      <style jsx global>{`
-        .phone-input-container {
-          width: 100%;
-        }
-        
-        .phone-input-container .form-control {
-          width: 100% !important;
-          height: 48px !important;
-          background-color: #0c1015 !important;
-          border: 1px solid #374151 !important;
-          border-radius: 8px !important;
-          color: white !important;
-          font-size: 16px !important;
-          padding-left: 48px !important;
-        }
-        
-        .phone-input-container .form-control:focus {
-          border-color: #25D366 !important;
-          box-shadow: none !important;
-        }
-        
-        .phone-input-container .form-control::placeholder {
-          color: #6b7280 !important;
-        }
-        
-        .phone-input-container .flag-dropdown {
-          background-color: #0c1015 !important;
-          border: 1px solid #374151 !important;
-          border-right: none !important;
-          border-radius: 8px 0 0 8px !important;
-        }
-        
-        .phone-input-container .flag-dropdown:hover,
-        .phone-input-container .flag-dropdown:focus,
-        .phone-input-container .flag-dropdown.open {
-          background-color: #1c2530 !important;
-        }
-        
-        .phone-input-container .selected-flag {
-          background-color: transparent !important;
-          padding: 0 0 0 12px !important;
-          width: 42px !important;
-        }
-        
-        .phone-input-container .selected-flag:hover,
-        .phone-input-container .selected-flag:focus,
-        .phone-input-container .selected-flag.open {
-          background-color: transparent !important;
-        }
-        
-        .phone-input-container .selected-flag .flag {
-          transform: scale(1.2);
-        }
-        
-        .phone-input-container .selected-flag .arrow {
-          border-top-color: #9ca3af !important;
-          left: 22px !important;
-        }
-        
-        .phone-input-container .selected-flag .arrow.up {
-          border-bottom-color: #9ca3af !important;
-        }
-        
-        .phone-input-container .country-list {
-          background-color: #1c2530 !important;
-          border: 1px solid #374151 !important;
-          border-radius: 8px !important;
-          margin-top: 4px !important;
-          max-height: 200px !important;
-        }
-        
-        .phone-input-container .country-list .country {
-          color: white !important;
-          padding: 10px 12px !important;
-        }
-        
-        .phone-input-container .country-list .country:hover,
-        .phone-input-container .country-list .country.highlight {
-          background-color: #0c1015 !important;
-        }
-        
-        .phone-input-container .country-list .country .dial-code {
-          color: #9ca3af !important;
-        }
-        
-        .phone-input-container .country-list .search {
-          background-color: #0c1015 !important;
-          border-bottom: 1px solid #374151 !important;
-          padding: 10px !important;
-        }
-        
-        .phone-input-container .country-list .search-box {
-          background-color: #1c2530 !important;
-          border: 1px solid #374151 !important;
-          border-radius: 6px !important;
-          color: white !important;
-          padding: 8px 12px !important;
-          width: 100% !important;
-        }
-        
-        .phone-input-container .country-list .search-box::placeholder {
-          color: #6b7280 !important;
-        }
-        
-        .phone-input-container .country-list::-webkit-scrollbar {
-          width: 6px;
-        }
-        
-        .phone-input-container .country-list::-webkit-scrollbar-track {
-          background: #0c1015;
-          border-radius: 3px;
-        }
-        
-        .phone-input-container .country-list::-webkit-scrollbar-thumb {
-          background: #374151;
-          border-radius: 3px;
-        }
-        
-        .phone-input-container .country-list::-webkit-scrollbar-thumb:hover {
-          background: #4b5563;
-        }
-      `}</style>
+
 
       <div className="max-w-6xl mx-auto px-4">
         {/* Outer container with border */}
@@ -249,16 +124,63 @@ export default function ContactForm() {
                     />
                   </div>
 
-                  {/* Phone Input with react-phone-input-2 */}
-                  <PhoneInput
-                    country={countryCode}
-                    value={phone}
-                    onChange={(value) => setPhone(value)}
-                    placeholder={t("contactForm.phonePlaceholder")}
-                    enableSearch={true}
-                    searchPlaceholder={t("contactForm.searchCountry")}
-                    containerClass="phone-input-container"
-                  />
+                  {/* Phone Input */}
+                  <div className="flex gap-3">
+                    <div className="relative w-[140px] flex-shrink-0 group">
+                      {/* Visual Fake Input (Background & Border) */}
+                      <div className="absolute inset-0 bg-[#0c1015] border border-gray-700 rounded-lg group-focus-within:border-[#25D366] transition-colors pointer-events-none z-10 flex items-center pl-12 pr-8 text-white">
+                        {countryToDialCode[selectedIso]}
+                      </div>
+
+                      {/* Arrow Icon */}
+                      <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none z-20">
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 1L6 6L11 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </div>
+
+                      {/* Flag Icon */}
+                      <div className="absolute left-3 top-1/2 -translate-y-1/2 z-20 pointer-events-none">
+                        {Flags[selectedIso as keyof typeof Flags] ? (
+                          <div className="w-6 h-4">
+                            {(() => {
+                              const Flag = Flags[selectedIso as keyof typeof Flags];
+                              return <Flag />;
+                            })()}
+                          </div>
+                        ) : (
+                          <span className="w-6 h-4 block bg-gray-600 rounded-sm"></span>
+                        )}
+                      </div>
+
+                      {/* Invisible Select (Interaction Layer) */}
+                      <select
+                        value={selectedIso}
+                        onChange={handleCountryChange}
+                        className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-30 appearance-none bg-transparent"
+                      >
+                        {Object.keys(countryToDialCode).sort().map((iso) => (
+                          <option key={iso} value={iso} className="bg-[#0c1015] text-white">
+                            {countryNames[iso] || iso} ({countryToDialCode[iso]})
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="relative flex-1">
+                      <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                      </div>
+                      <input
+                        type="tel"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        placeholder={t("contactForm.phonePlaceholder")}
+                        className="w-full pl-10 pr-4 py-3 rounded-lg bg-[#0c1015] border border-gray-700 text-white placeholder-gray-500 focus:border-[#25D366] focus:outline-none transition-colors"
+                      />
+                    </div>
+                  </div>
 
                   {/* Email Input */}
                   <div className="relative">

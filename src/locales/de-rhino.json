@@ -273,6 +273,7 @@
     "thankYou": {
         "title": "Vielen Dank!",
         "message": "Ihr Formular wurde erfolgreich übermittelt.",
-        "backToHome": "Zurück zur Startseite"
+        "backToHome": "Zurück zur Startseite",
+        "contactUs": "Kontaktieren Sie uns jetzt!"
     }
 }

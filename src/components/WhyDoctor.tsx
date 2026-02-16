@@ -9,7 +9,7 @@ interface Feature {
 
 export default function WhyDoctor() {
   const { t, tArray } = useTranslation();
-  const features = tArray<Feature>("whyDoctor.features");
+  const features = tArray < Feature > ("whyDoctor.features");
 
   return (
     <section className="py-16 bg-[#0c1015]">
@@ -17,7 +17,7 @@ export default function WhyDoctor() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Features */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">
               {t("whyDoctor.titleLine1")}<br />
               {t("whyDoctor.titleLine2")}<br />
               {t("whyDoctor.titleLine3")}

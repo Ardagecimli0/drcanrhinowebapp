@@ -12,7 +12,7 @@ export default function Publications() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-4 items-center">
           {/* Left Column - Text Content */}
           <div className="text-left lg:pr-8">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               {t("publications.title")}
             </h2>
             <div className="w-12 h-0.5 bg-gray-600 mb-6" />

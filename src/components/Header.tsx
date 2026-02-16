@@ -28,17 +28,12 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center gap-3">
           <Image
-            src="/images/logo.png"
+            src="/images/logo-kalkavan.png"
             alt="Dr. Can Kalkavan Logo"
-            width={70}
-            height={70}
-            className={`transition-all duration-300 ${isScrolled ? 'h-12 w-auto' : 'h-16 w-auto'}`}
+            width={240}
+            height={80}
+            className={`transition-all duration-300 object-contain ${isScrolled ? 'h-20 lg:h-24 w-auto scale-110' : 'h-24 lg:h-28 w-auto scale-125'}`}
           />
-          <div className={`hidden sm:block transition-all duration-300 ${isScrolled ? 'scale-90 origin-left' : 'scale-100'}`}>
-            <p className={`text-white font-medium transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}>{t("common.opDr")}</p>
-            <p className={`text-white font-bold transition-all duration-300 ${isScrolled ? 'text-lg' : 'text-xl'}`}>Can Kalkavan</p>
-            <p className={`text-gray-400 transition-all duration-300 ${isScrolled ? 'text-xs' : 'text-sm'}`}>{t("common.specialty")}</p>
-          </div>
         </div>
 
         {/* CTA Button */}
@@ -46,7 +41,7 @@ export default function Header() {
           href="https://api.whatsapp.com/send?phone=905467633630&text=What%20are%20the%20options%20and%20pricing%20for%20rhinoplasty"
           target="_blank"
           rel="noopener noreferrer"
-          className={`btn-green rounded-lg text-white font-semibold flex items-center gap-2 transition-all duration-300 ${isScrolled ? 'px-4 py-2 text-sm' : 'px-6 py-3 text-base'
+          className={`btn-green rounded-lg text-white font-semibold flex items-center gap-2 transition-all duration-300 ${isScrolled ? 'px-6 py-3 text-sm md:text-base' : 'px-8 py-4 text-base md:text-lg'
             }`}
         >
           <span className="hidden sm:inline">{t("header.contactUsNow")}</span>

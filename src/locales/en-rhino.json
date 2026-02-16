@@ -273,6 +273,7 @@
     "thankYou": {
         "title": "Thank You!",
         "message": "Your form has been successfully submitted.",
-        "backToHome": "Back to Home"
+        "backToHome": "Back to Home",
+        "contactUs": "Contact Us Now!"
     }
 }

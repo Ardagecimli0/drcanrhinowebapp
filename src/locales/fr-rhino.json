@@ -273,6 +273,7 @@
     "thankYou": {
         "title": "Merci !",
         "message": "Votre formulaire a été soumis avec succès.",
-        "backToHome": "Retour à l'accueil"
+        "backToHome": "Retour à l'accueil",
+        "contactUs": "Contactez-nous maintenant !"
     }
 }

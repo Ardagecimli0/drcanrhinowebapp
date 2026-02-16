@@ -11,9 +11,9 @@ export default function Packages() {
   const { t, tObject } = useTranslation();
 
   const packages: Package[] = [
-    tObject<Package>("packages.openRhinoplasty"),
-    tObject<Package>("packages.pushDownLetDown"),
-    tObject<Package>("packages.piezo"),
+    tObject < Package > ("packages.openRhinoplasty"),
+    tObject < Package > ("packages.pushDownLetDown"),
+    tObject < Package > ("packages.piezo"),
   ];
 
   return (
@@ -36,7 +36,12 @@ export default function Packages() {
                 {pkg.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-2 text-gray-400 text-sm">
                     <span className="text-[#c9a96e] mt-0.5">•</span>
-                    {feature}
+                    <a
+                      href="https://api.whatsapp.com/send?phone=905467633630&text=What%20are%20the%20options%20and%20pricing%20for%20rhinoplasty"
+                      className="inline-block border-b border-gray-500 hover:text-white hover:border-white transition-colors"
+                    >
+                      {feature}
+                    </a>
                   </li>
                 ))}
               </ul>
