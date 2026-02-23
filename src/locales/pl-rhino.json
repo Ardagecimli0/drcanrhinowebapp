@@ -1,0 +1,279 @@
+{
+    "common": {
+        "doctorName": "Lek. med. Can Kalkavan",
+        "specialty": "Specjalista Otolaryngolog",
+        "opDr": "Lek. med.",
+        "freeConsultation": "Bezpłatna Konsultacja",
+        "submit": "WYŚLIJ",
+        "whatsapp": "WhatsApp",
+        "or": "lub",
+        "rhinoplasty": "Rhinoplastyka",
+        "patient": "Pacjent"
+    },
+    "header": {
+        "contactUsNow": "Skontaktuj się z nami w sprawie",
+        "rhinoplasty": "Rhinoplastyki!"
+    },
+    "hero": {
+        "title": "Rhinoplastyka w Turcji",
+        "startingFrom": "Już od 2990€",
+        "consultationSubtitle": "Uzyskaj spersonalizowaną konsultację dotyczącą korekty nosa",
+        "namePlaceholder": "Imię i nazwisko",
+        "phonePlaceholder": "Numer telefonu",
+        "emailPlaceholder": "Adres e-mail",
+        "searchCountry": "Szukaj kraju..."
+    },
+    "beforeAfter": {
+        "titleLine1": "Zobacz te niesamowite",
+        "titleLine2": "metamorfozy „Przed i Po”!",
+        "description": "Odkryj naturalne efekty osiągnięte dzięki wiedzy i doświadczeniu lek. med. Cana Kalkavana.",
+        "previous": "Poprzedni",
+        "next": "Następny",
+        "goToSlide": "Przejdź do slajdu"
+    },
+    "contactForm": {
+        "title": "Uzyskaj bezpłatną konsultację",
+        "subtitle": "Wypełnij formularz, a wkrótce się z Tobą skontaktujemy",
+        "namePlaceholder": "Imię i nazwisko",
+        "phonePlaceholder": "Numer telefonu",
+        "emailPlaceholder": "Adres e-mail",
+        "searchCountry": "Szukaj kraju..."
+    },
+    "doctorInfo": {
+        "roles": [
+            {
+                "title": "Chirurg",
+                "description": "Specjalista Otolaryngolog (Laryngolog)"
+            },
+            {
+                "title": "Malarz - Rzeźbiarz",
+                "description": "Malarstwo olejne, dzieła klasyczne i abstrakcyjne..."
+            },
+            {
+                "title": "Autor",
+                "description": "Autor książki artystycznej o nosie, piersiach i ustach; publikacje w Elle, Vogue, CNNTurk"
+            }
+        ],
+        "planYourJourney": "Zaplanuj swoją podróż po nowy wygląd z"
+    },
+    "faq": {
+        "title": "Często Zadawane Pytania",
+        "questions": [
+            {
+                "question": "Co to jest rhinoplastyka?",
+                "answer": "Rhinoplastyka to zabieg chirurgiczny, który zmienia kształt lub naprawia nos. Może być wykonywany w celach kosmetycznych, aby poprawić wygląd nosa, lub w celach funkcjonalnych, aby skorygować problemy z oddychaniem."
+            },
+            {
+                "question": "Czy jestem dobrym kandydatem do rhinoplastyki?",
+                "answer": "Dobrymi kandydatami są osoby o dobrym ogólnym stanie zdrowia, mające realistyczne oczekiwania co do wyników i dążące do poprawy wyglądu lub funkcjonowania nosa. Konsultacja z dr. Kalkavanem pomoże ustalić, czy jesteś odpowiednim kandydatem."
+            },
+            {
+                "question": "Jak długo trwa operacja nosa?",
+                "answer": "Operacja rhinoplastyki trwa zazwyczaj od 1,5 do 3 godzin, w zależności od złożoności zabiegu i zastosowanych technik."
+            },
+            {
+                "question": "Jak długo trwa okres rekonwalescencji?",
+                "answer": "Początkowa rekonwalescencja trwa około 1-2 tygodni, podczas których może wystąpić obrzęk i zasinienie. Większość pacjentów może wrócić do pracy po 7-10 dniach. Pełne efekty są widoczne po 6-12 miesiącach, gdy obrzęk całkowicie ustąpi."
+            },
+            {
+                "question": "Czy po operacji będę mieć widoczne blizny?",
+                "answer": "W przypadku rhinoplastyki zamkniętej wszystkie nacięcia wykonywane są wewnątrz nosa, nie pozostawiając widocznych blizn. Rhinoplastyka otwarta wiąże się z małym nacięciem na słupku nosa, które zazwyczaj goi się tak, że staje się niemal niewidoczne."
+            },
+            {
+                "question": "Ile operacji nosa przeprowadził dr Can Kalkavan?",
+                "answer": "Dr Can Kalkavan przeprowadził ponad 20 000 udanych zabiegów rhinoplastyki, przy 98% wskaźniku zadowolenia pacjentów."
+            }
+        ]
+    },
+    "footer": {
+        "description": "Certyfikowany przez Europejską Radę chirurg plastyczny, specjalizujący się w rhinoplastyce i chirurgii estetycznej. Specjalista otolaryngolog z certyfikatem European Board.",
+        "copyright": "Copyright © 2025 Lek. med. Can Kalkavan - Wszelkie prawa zastrzeżone",
+        "address": "Acıbadem mah. Çeçen sok, Akasya Avm NO:25 B1 blok Kat:7 D:89, 34674 Üsküdar/Stambuł"
+    },
+    "hospitalHotel": {
+        "hospital": "SZPITAL",
+        "hotel": "HOTEL",
+        "hospitalTitle": "Nasi goście są goszczeni w",
+        "hospitalName": "Szpital Kartal Kızılay",
+        "hotelTitle": "Nasi goście zatrzymują się w",
+        "hotelName": "Hotel Istanbul Milord"
+    },
+    "journey": {
+        "titleLine1": "Jak będzie wyglądać Twoja",
+        "titleLine2": "podróż z rhinoplastyką?",
+        "steps": [
+            "Konsultacja online",
+            "Przyjazd do Stambułu",
+            "Badania przedoperacyjne",
+            "Badanie u lek. med. Cana Kalkavana",
+            "Planowanie dnia operacji",
+            "Operacja",
+            "Kontrola pooperacyjna",
+            "Zdjęcie szyny i silikonów",
+            "Regularne kontrole",
+            "Wylot",
+            "Odzyskana pewność siebie"
+        ]
+    },
+    "packages": {
+        "title": "NASZE PAKIETY",
+        "getMoreInfo": "Uzyskaj więcej informacji",
+        "openRhinoplasty": {
+            "title": "Rhinoplastyka Otwarta",
+            "features": [
+                "Zapewnia szeroki wgląd operacyjny",
+                "Skuteczna w złożonych przypadkach",
+                "Precyzyjne modelowanie czubka nosa",
+                "Długotrwałe rezultaty",
+                "Koryguje problemy funkcjonalne",
+                "Zmniejsza potrzebę rewizji",
+                "Pozwala uzyskać naturalny wygląd"
+            ]
+        },
+        "pushDownLetDown": {
+            "title": "Technika Push-Down & Let-Down",
+            "features": [
+                "Zachowuje naturalny grzbiet nosa",
+                "Minimalna ingerencja w kość i chrząstkę",
+                "Mniejszy uraz tkanek",
+                "Szybsza i bardziej komfortowa rekonwalescencja",
+                "Utrzymuje naturalną linię mostka nosa",
+                "Nowoczesne i innowacyjne podejście",
+                "Zapewnia naturalne efekty estetyczne",
+                "Wspiera funkcje oddechowe"
+            ]
+        },
+        "piezo": {
+            "title": "Technika Piezo",
+            "features": [
+                "Precyzja ultradźwiękowa",
+                "Minimalny uraz tkanek",
+                "Zredukowane zasinienia",
+                "Mniejszy obrzęk",
+                "Szybsza rekonwalescencja",
+                "Zwiększone bezpieczeństwo",
+                "Przewidywalne rezultaty",
+                "Delikatne modelowanie kości"
+            ]
+        }
+    },
+    "publications": {
+        "title": "Opracowane techniki chirurgiczne opublikowane w najbardziej prestiżowych czasopismach międzynarodowych",
+        "description": "Zaawansowane techniki sprawiają, że rhinoplastyka jest bezpieczniejsza, bardziej naturalna i satysfakcjonująca, pomagając pacjentom osiągnąć harmonię twarzy przy jednoczesnej poprawie jakości oddychania."
+    },
+    "rhinoplastyBeforeAfterYT": {
+        "title": "Rhinoplastyka: Wyniki Przed i Po",
+        "subtitle": "Odkryj naturalne metamorfozy osiągnięte dzięki wiedzy"
+    },
+    "stats": {
+        "operations": {
+            "value": "+20000",
+            "label": "Tysiące przeprowadzonych udanych zabiegów rhinoplastyki"
+        },
+        "years": {
+            "value": "30+",
+            "label": "Lat doświadczenia w rhinoplastyce"
+        },
+        "recommendation": {
+            "value": "95%",
+            "label": "pacjentów poleca lek. med. Cana Kalkavana"
+        },
+        "satisfaction": {
+            "value": "98%",
+            "label": "Wskaźnik zadowolenia pacjentów po zabiegach"
+        }
+    },
+    "techniques": {
+        "title": "Techniki Rhinoplastyki",
+        "items": [
+            "Rhinoplastyka otwarta",
+            "Technika Piezo",
+            "Technika Push-Down",
+            "Technika Let-Down"
+        ]
+    },
+    "testimonials": {
+        "titleLine1": "Historie pacjentów o",
+        "titleLine2": "metamorfozie",
+        "titleLine3": "i pewności siebie",
+        "description": "Kochamy naszych pacjentów, ale nie wierz nam na słowo. Zobacz, co o nas mówią!",
+        "ctaButton": "Zacznij zmiany już teraz!",
+        "reviews": [
+            {
+                "text": "Przeszłam operację nosa u lek. med. Cana Kalkavana i jestem więcej niż zadowolona z rezultatu. Dzięki jego wiedzy, troskliwej opiece i uspokajającemu podejściu przed i po operacji, czułam się bezpiecznie na każdym kroku. Uważnie wysłuchał moich życzeń, cierpliwie odpowiedział na wszystkie pytania i osiągnął naturalny wynik idealnie pasujący do mojej twarzy.",
+                "name": "Anna Müller",
+                "country": "DE"
+            },
+            {
+                "text": "Miałam wykonaną rhinoplastykę u dr. Cana Kalkavana na początku listopada 2024 roku i nie mogłabym być bardziej szczęśliwa z mojego wyboru. To była moja pierwsza operacja w życiu i byłam bardzo zdenerwowana, ale zarówno dr Kalkavan, jak i jego zespół sprawili, że cały proces przebiegł sprawnie i bezstresowo. Ich uprzejmość i profesjonalizm były wyjątkowe.",
+                "name": "Hannah Schmidt",
+                "country": "DE"
+            },
+            {
+                "text": "Niedawno przeszłam operację nosa i jestem zachwycona wynikami. Lek. med. Can Kalkavan to prawdziwy artysta i niezwykle troskliwy człowiek. Od momentu wejścia do gabinetu wiedziałam, że jestem w dobrych rękach. Doktor i jego personel byli niesamowicie profesjonalni i przyjaźni, sprawiając, że czułam się swobodnie przez cały czas.",
+                "name": "Emily Thompson",
+                "country": "UK"
+            }
+        ]
+    },
+    "whyDoctor": {
+        "titleLine1": "Dlaczego warto wybrać",
+        "titleLine2": "lek. med. Cana Kalkavana",
+        "titleLine3": "do rhinoplastyki?",
+        "features": [
+            {
+                "label": "Lider zespołu:",
+                "text": "Kierowany przez lek. med. Cana Kalkavana, specjalistę otolaryngologa z certyfikatem European Board"
+            },
+            {
+                "label": "Ekspercka wiedza:",
+                "text": "Spersonalizowane podejście do rhinoplastyki, skrupulatnie zaprojektowane, aby harmonizowało z unikalną strukturą twarzy każdego pacjenta"
+            },
+            {
+                "label": "Prestiż naukowy:",
+                "text": "Techniki chirurgiczne, których był pionierem, zostały opublikowane w najbardziej prestiżowych czasopismach międzynarodowych, co podkreśla jego wkład w światową literaturę medyczną."
+            },
+            {
+                "label": "Technologia:",
+                "text": "Najnowocześniejsze metody chirurgiczne łączące innowację z precyzją, zapewniające naturalne i funkcjonalne efekty"
+            },
+            {
+                "label": "Gwarancja:",
+                "text": "Uznany na całym świecie za sukcesy i bezpieczeństwo, zapewniający pacjentom pewność i spokój ducha"
+            }
+        ]
+    },
+    "whyTurkey": {
+        "title": "Dlaczego warto wybrać Turcję na korektę nosa?",
+        "reasons": [
+            {
+                "title": "Przystępne ceny:",
+                "description": "Turcja oferuje rhinoplastykę w cenach bardziej konkurencyjnych niż wiele krajów europejskich, zachowując przy tym wysokie standardy opieki medycznej."
+            },
+            {
+                "title": "Zaleta geograficzna:",
+                "description": "Dzięki Stambułowi jako globalnemu węzłowi komunikacyjnemu, pacjenci mogą połączyć operację z doświadczeniami kulturowymi, czyniąc podróż zarówno medyczną, jak i turystyczną."
+            },
+            {
+                "title": "Zaawansowane techniki:",
+                "description": "Tureccy chirurdzy są wykwalifikowani w rhinoplastyce otwartej, zamkniętej oraz technikach push-down i let-down, osiągając naturalne rezultaty."
+            },
+            {
+                "title": "Nowoczesna technologia:",
+                "description": "Szpitale wykorzystują obrazowanie 3D, nowoczesne narzędzia chirurgiczne i innowacyjne metody rekonwalescencji, zapewniając bezpieczne operacje i szybsze gojenie."
+            }
+        ]
+    },
+    "cookieConsent": {
+        "title": "Zarządzaj zgodą",
+        "description": "Aby zapewnić najlepsze wrażenia, korzystamy z technologii takich jak pliki cookie do przechowywania i/lub uzyskiwania dostępu do informacji o urządzeniu. Zgoda na te technologie pozwoli nam przetwarzać dane, takie jak zachowanie podczas przeglądania lub unikalne identyfikatory na tej stronie. Brak zgody lub jej wycofanie może niekorzystnie wpłynąć na niektóre funkcje.",
+        "accept": "Akceptuję",
+        "viewPreferences": "Zobacz preferencje"
+    },
+    "thankYou": {
+        "title": "Dziękujemy!",
+        "message": "Twój formularz został pomyślnie wysłany.",
+        "backToHome": "Powrót do strony głównej",
+        "contactUs": "Skontaktuj się z nami teraz!"
+    }
+}

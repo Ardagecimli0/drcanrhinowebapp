@@ -7,6 +7,7 @@ export function generateStaticParams() {
         { slug: "es" },
         { slug: "fr" },
         { slug: "it" },
+        { slug: "pl" },
     ];
 }
 

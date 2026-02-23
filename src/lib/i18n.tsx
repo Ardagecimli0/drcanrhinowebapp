@@ -6,6 +6,7 @@ import deRhino from "@/locales/de-rhino.json";
 import esRhino from "@/locales/es-rhino.json";
 import frRhino from "@/locales/fr-rhino.json";
 import itRhino from "@/locales/it-rhino.json";
+import plRhino from "@/locales/pl-rhino.json";
 
 type TranslationData = typeof enRhino;
 
@@ -26,6 +27,7 @@ const translations: Record<string, TranslationData> = {
     es: esRhino,
     fr: frRhino,
     it: itRhino,
+    pl: plRhino,
 };
 
 // Ülke kodu -> Dil kodu haritası
@@ -45,6 +47,17 @@ const countryToLocale: Record<string, string> = {
     US: "en",
     GB: "en",
     AU: "en",
+    PL: "pl",
+};
+
+// URL Slug -> Dil kodu haritası
+const slugToLocale: Record<string, string> = {
+    "/Rhinoplasty-in-Turkey": "en",
+    "/Nasenkorrektur-in-der-Turkei": "de",
+    "/Rinoplastia-en-Turquia": "es",
+    "/Rhinoplastie-en-Turquie": "fr",
+    "/Rinoplastica-in-Turchia": "it",
+    "/Rhinoplastyka-w-Turcji": "pl",
 };
 
 function getNestedValue(obj: unknown, path: string): unknown {
@@ -72,9 +85,21 @@ export function I18nProvider({ children }: { children: ReactNode }) {
         setIsMounted(true);
     }, []);
 
-    // IP'ye göre ülkeyi tespit et ve dili ayarla
+    // IP'ye veya Slug'a göre dili ayarla
     useEffect(() => {
         if (!isMounted) return;
+
+        // URL'den dili belirle
+        const pathname = window.location.pathname;
+
+        // Pathname'in sonundaki slaşı kaldırıp karşılaştırabiliriz (eğer varsa)
+        const cleanPath = pathname.endsWith('/') && pathname.length > 1 ? pathname.slice(0, -1) : pathname;
+
+        if (slugToLocale[cleanPath]) {
+            setLocale(slugToLocale[cleanPath]);
+            setIsReady(true);
+            return; // Sluğa göre bulunduysa IP tespiti yapma
+        }
 
         const detectCountryAndSetLocale = async () => {
             const controller = new AbortController();
