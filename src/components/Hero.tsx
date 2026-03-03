@@ -49,7 +49,7 @@ export default function Hero() {
     const languageNames: Record<string, string> = {
       en: "English", de: "German", fr: "French", it: "Italian",
       ar: "Arabic", tr: "Turkish", es: "Spanish", nl: "Dutch",
-      pt: "Portuguese", sv: "Swedish", ru: "Russian"
+      pt: "Portuguese", sv: "Swedish", ru: "Russian", pl: "Polish"
     };
     const langName = languageNames[locale.toLowerCase()] || locale.toUpperCase();
 
@@ -60,7 +60,7 @@ export default function Hero() {
       phone: `${countryCode}${phone}`,
       email: email,
       lead_source: "Google/Web Form",
-      language: locale.toUpperCase(),
+      language: langName,
       source_language: langName,
       country: countryName,
       Country: countryName,
