@@ -7,7 +7,7 @@ export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="pt-24 pb-12 bg-[#14151D] border-t border-white/10">
+    <footer className="pt-4 pb-12 bg-[#14151D] border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 items-start">
           {/* Left Side - Logo and About */}

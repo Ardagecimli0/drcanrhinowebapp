@@ -14,7 +14,7 @@ export default function Techniques() {
   const techniques = tArray < string > ("techniques.items");
 
   return (
-    <section style={{ padding: '100px 0', backgroundColor: '#14151D' }}>
+    <section style={{ padding: '100px 0 40px 0', backgroundColor: '#14151D' }}>
       {/* Floating animation keyframes */}
       <style jsx>{`
         @keyframes float {
@@ -81,8 +81,8 @@ export default function Techniques() {
                   <img
                     src={techniqueIcons[index]}
                     alt={technique}
-                    className="w-12 h-12 md:w-14 md:h-14 opacity-70 transition-all duration-300 group-hover:opacity-100 group-hover:brightness-150 relative z-10"
-                    style={{ filter: 'brightness(0.9)' }}
+                    className="w-12 h-12 md:w-14 md:h-14 opacity-90 transition-all duration-300 group-hover:opacity-100 relative z-10"
+                    style={{ filter: 'brightness(0) invert(1)' }}
                   />
                 </div>
                 <p

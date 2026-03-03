@@ -129,16 +129,16 @@ export default function ContactForm() {
                       placeholder={t("contactForm.namePlaceholder")}
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full pl-12 pr-4 py-3 rounded-lg bg-[#14151D] border border-gray-700/50 text-white placeholder-gray-500 focus:border-[#CBB089] focus:outline-none transition-colors"
+                      className="w-full pl-12 pr-4 py-4 rounded-lg bg-[#14151D] border border-gray-700/50 text-white placeholder-gray-500 focus:border-[#CBB089] focus:outline-none transition-colors"
                       required
                     />
                   </div>
 
                   {/* Phone Input */}
                   <div className="flex gap-3">
-                    <div className="relative w-[140px] flex-shrink-0 group">
+                    <div className="relative w-[90px] sm:w-[110px] flex-shrink-0 group">
                       {/* Visual Fake Input (Background & Border) */}
-                      <div className="absolute inset-0 bg-[#14151D] border border-gray-700/50 rounded-lg group-focus-within:border-[#CBB089] transition-colors pointer-events-none z-10 flex items-center pl-12 pr-8 text-white">
+                      <div className="absolute inset-0 bg-[#14151D] border border-gray-700/50 rounded-lg group-focus-within:border-[#CBB089] transition-colors pointer-events-none z-10 flex items-center pl-10 pr-2 text-white">
                         {countryToDialCode[selectedIso]}
                       </div>
 
@@ -187,12 +187,11 @@ export default function ContactForm() {
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         placeholder={t("contactForm.phonePlaceholder")}
-                        className="w-full pl-10 pr-4 py-3 rounded-lg bg-[#14151D] border border-gray-700/50 text-white placeholder-gray-500 focus:border-[#CBB089] focus:outline-none transition-colors"
+                        className="w-full pl-10 pr-4 py-4 rounded-lg bg-[#14151D] border border-gray-700/50 text-white placeholder-gray-500 focus:border-[#CBB089] focus:outline-none transition-colors"
                       />
                     </div>
                   </div>
 
-                  {/* Email Input */}
                   <div className="relative">
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 z-10">
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -205,7 +204,7 @@ export default function ContactForm() {
                       placeholder={t("contactForm.emailPlaceholder")}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full pl-12 pr-4 py-3 rounded-lg bg-[#14151D] border border-gray-700/50 text-white placeholder-gray-500 focus:border-[#CBB089] focus:outline-none transition-colors"
+                      className="w-full pl-12 pr-4 py-4 rounded-lg bg-[#14151D] border border-gray-700/50 text-white placeholder-gray-500 focus:border-[#CBB089] focus:outline-none transition-colors"
                       required
                     />
                   </div>

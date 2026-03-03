@@ -17,10 +17,10 @@ export default function Packages() {
   ];
 
   return (
-    <section style={{ padding: '100px 0', backgroundColor: '#14151D' }}>
+    <section style={{ padding: '0px 0', backgroundColor: '#14151D' }}>
       <div className="max-w-7xl mx-auto px-4">
         <h2
-          className="text-center mb-16 tracking-wide uppercase"
+          className="text-center mb-6 tracking-wide uppercase"
           style={{
             color: '#C9A983',
             fontSize: 'clamp(28px, 4vw, 40px)',
@@ -66,7 +66,7 @@ export default function Packages() {
                       style={{ color: 'rgba(209, 213, 219, 1)' }}
                     >
                       <span className="mt-1 text-[10px] transition-transform group-hover:scale-125" style={{ color: '#C9A983' }}>●</span>
-                      <span className="leading-relaxed group-hover:text-white transition-colors">{feature}</span>
+                      <span className="leading-relaxed group-hover:text-white transition-colors underline underline-offset-4 decoration-white/20">{feature}</span>
                     </a>
                   </li>
                 ))}

@@ -12,7 +12,7 @@ export default function WhyDoctor() {
   const features = tArray < Feature > ("whyDoctor.features");
 
   return (
-    <section className="py-20 bg-[#14151D]">
+    <section className="pt-10 pb-20 bg-[#14151D]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Features */}

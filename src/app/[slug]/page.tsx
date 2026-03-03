@@ -20,12 +20,12 @@ import CookieConsent from "@/components/CookieConsent";
 
 export function generateStaticParams() {
     return [
-        { slug: "Rhinoplasty-in-Turkey" },
-        { slug: "Nasenkorrektur-in-der-Turkei" },
-        { slug: "Rinoplastia-en-Turquia" },
-        { slug: "Rhinoplastie-en-Turquie" },
-        { slug: "Rinoplastica-in-Turchia" },
-        { slug: "Rhinoplastyka-w-Turcji" },
+        { slug: "rhinoplasty-in-turkey" },
+        { slug: "nasenkorrektur-in-der-turkei" },
+        { slug: "rinoplastia-en-turquia" },
+        { slug: "rhinoplastie-en-turquie" },
+        { slug: "rinoplastica-in-turchia" },
+        { slug: "rhinoplastyka-w-turcji" },
     ];
 }
 

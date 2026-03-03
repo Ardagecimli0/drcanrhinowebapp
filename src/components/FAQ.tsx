@@ -14,7 +14,7 @@ export default function FAQ() {
   const faqs = tArray < FAQItem > ("faq.questions");
 
   return (
-    <section className="py-20 bg-[#1a1b26]">
+    <section className="pt-12 pb-4 bg-[#1a1b26]">
       <div className="max-w-3xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-[#CBB089] text-center mb-12">
           {t("faq.title")}

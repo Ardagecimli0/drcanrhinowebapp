@@ -13,7 +13,7 @@ export default function WhyTurkey() {
   const reasons = tArray < Reason > ("whyTurkey.reasons");
 
   return (
-    <section style={{ padding: '100px 0', backgroundColor: '#14151D' }}>
+    <section style={{ padding: '60px 0', backgroundColor: '#14151D' }}>
       <style jsx>{`
         @keyframes float {
           0%, 100% {

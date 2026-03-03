@@ -52,12 +52,12 @@ const countryToLocale: Record<string, string> = {
 
 // URL Slug -> Dil kodu haritası
 const slugToLocale: Record<string, string> = {
-    "/Rhinoplasty-in-Turkey": "en",
-    "/Nasenkorrektur-in-der-Turkei": "de",
-    "/Rinoplastia-en-Turquia": "es",
-    "/Rhinoplastie-en-Turquie": "fr",
-    "/Rinoplastica-in-Turchia": "it",
-    "/Rhinoplastyka-w-Turcji": "pl",
+    "/rhinoplasty-in-turkey": "en",
+    "/nasenkorrektur-in-der-turkei": "de",
+    "/rinoplastia-en-turquia": "es",
+    "/rhinoplastie-en-turquie": "fr",
+    "/rinoplastica-in-turchia": "it",
+    "/rhinoplastyka-w-turcji": "pl",
 };
 
 function getNestedValue(obj: unknown, path: string): unknown {

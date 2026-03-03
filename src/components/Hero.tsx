@@ -115,7 +115,7 @@ export default function Hero() {
     <section
       className="relative overflow-hidden"
       style={{
-        paddingTop: '160px',
+        paddingTop: '100px',
         paddingBottom: '100px',
         minHeight: '90vh',
         background: 'radial-gradient(ellipse 90% 70% at 50% 30%, #252840 0%, #1c1e30 25%, #171825 45%, #14151D 65%, #0f1018 100%)'
