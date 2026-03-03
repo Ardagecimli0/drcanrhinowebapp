@@ -1,18 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Rubik:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #0c1015;
+  --background: #14151D;
   --foreground: #ffffff;
-  --gold: #c9a96e;
-  --gold-light: #d4b87a;
-  --green: #22c55e;
-  --green-dark: #16a34a;
-  --card-bg: #151b23;
-  --card-bg-light: #1c2530;
+  --gold: #C9A983;
+  --gold-light: #D4BC96;
+  --green: #25D366;
+  --green-dark: #22C55E;
+  --card-bg: #1E2029;
+  --card-bg-light: #1e2030;
+  --input-bg: #293449;
+  --nav-bg: #1E2029;
+  --blue-glow: rgba(0, 163, 255, 0.4);
+  --section-padding: 100px;
 }
 
 * {
@@ -26,36 +30,102 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Raleway', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Rubik', sans-serif;
 }
 
-/* Marquee Animation */
+/* ═══════════════════════════════════════════
+   TYPOGRAPHY HIERARCHY (Reference Match)
+   ═══════════════════════════════════════════ */
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+h2 {
+  font-size: 25.6px;
+  font-weight: 700;
+}
+
+/* ═══════════════════════════════════════════
+   MARQUEE ANIMATION
+   ═══════════════════════════════════════════ */
 @keyframes marquee {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
 }
 
 .animate-marquee {
-  animation: marquee 20s linear infinite;
+  animation: marquee 10s linear infinite;
 }
 
-/* Gradient backgrounds */
+/* ═══════════════════════════════════════════
+   GRADIENT BACKGROUNDS
+   ═══════════════════════════════════════════ */
 .gradient-dark {
-  background: linear-gradient(180deg, #0c1015 0%, #151b23 100%);
+  background: linear-gradient(180deg, #14151D 0%, #1E2029 100%);
 }
 
 .gradient-card {
-  background: linear-gradient(135deg, #1c2530 0%, #151b23 100%);
+  background: linear-gradient(135deg, #1E2029 0%, #1a1b26 100%);
 }
 
-/* Custom scrollbar */
+/* ═══════════════════════════════════════════
+   GLOW EFFECTS (Reference Site Match)
+   ═══════════════════════════════════════════ */
+.glow-blue {
+  box-shadow: 0 0 80px rgba(0, 163, 255, 0.4);
+}
+
+.glow-blue-subtle {
+  box-shadow: 0 0 60px rgba(0, 163, 255, 0.2);
+}
+
+.glow-gold {
+  box-shadow: 0 0 30px rgba(201, 169, 131, 0.3);
+}
+
+.glow-green {
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+/* Section glow decorators */
+.section-glow {
+  position: relative;
+}
+
+.section-glow::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(0, 163, 255, 0.08) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ═══════════════════════════════════════════
+   CUSTOM SCROLLBAR
+   ═══════════════════════════════════════════ */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -74,35 +144,82 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--gold-light);
 }
 
-/* Form styles */
-input, select {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+/* ═══════════════════════════════════════════
+   FORM STYLES (Reference Match)
+   ═══════════════════════════════════════════ */
+input,
+select {
+  background: #293449;
+  border: 1px solid rgba(201, 169, 131, 0.3);
   color: white;
+  border-radius: 8px;
+  font-family: 'Rubik', sans-serif;
+  transition: all 0.3s ease;
 }
 
 input::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
   outline: none;
   border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(201, 169, 131, 0.15);
 }
 
-/* Button hover effects */
+/* ═══════════════════════════════════════════
+   GLASSMORPHISM CARDS
+   ═══════════════════════════════════════════ */
+.glass-card {
+  background: rgba(76, 85, 102, 0.95);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.glass-card-light {
+  background: rgba(30, 32, 41, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+}
+
+/* ═══════════════════════════════════════════
+   BUTTON STYLES (Reference Match)
+   ═══════════════════════════════════════════ */
 .btn-green {
-  background: var(--green);
+  background: linear-gradient(135deg, #25D366, #22C55E);
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  letter-spacing: 0.5px;
 }
 
 .btn-green:hover {
-  background: var(--green-dark);
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(34, 197, 94, 0.3);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+  filter: brightness(1.1);
 }
 
-/* Card hover effects */
+.btn-gold {
+  background: linear-gradient(135deg, #C9A983, #D4BC96);
+  color: #14151D;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(201, 169, 131, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(201, 169, 131, 0.4);
+  filter: brightness(1.1);
+}
+
+/* ═══════════════════════════════════════════
+   CARD HOVER EFFECTS (Reference Match)
+   ═══════════════════════════════════════════ */
 .card-hover {
   transition: all 0.3s ease;
 }
@@ -112,12 +229,34 @@ input:focus, select:focus {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* FAQ accordion */
-.faq-item {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+/* Reference-style card */
+.ref-card {
+  background: #1E2029;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  transition: all 0.3s ease;
 }
 
-/* Timeline dots */
+.ref-card:hover {
+  border-color: rgba(201, 169, 131, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ═══════════════════════════════════════════
+   FAQ ACCORDION
+   ═══════════════════════════════════════════ */
+.faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ═══════════════════════════════════════════
+   TIMELINE DOTS
+   ═══════════════════════════════════════════ */
 .timeline-dot {
   width: 12px;
   height: 12px;
@@ -139,21 +278,20 @@ input:focus, select:focus {
   opacity: 0.5;
 }
 
-/* Glow effect */
-.glow-gold {
-  box-shadow: 0 0 20px rgba(201, 169, 110, 0.3);
-}
-
-/* Badge styles */
+/* ═══════════════════════════════════════════
+   BADGE STYLES
+   ═══════════════════════════════════════════ */
 .badge-hospital {
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  background: linear-gradient(135deg, #25D366 0%, #22C55E 100%);
 }
 
 .badge-hotel {
   background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
 }
 
-/* Phone input container */
+/* ═══════════════════════════════════════════
+   PHONE INPUT CONTAINER
+   ═══════════════════════════════════════════ */
 .phone-input-container {
   display: flex;
   gap: 0.5rem;
@@ -168,6 +306,34 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+/* ═══════════════════════════════════════════
+   SECTION BACKGROUNDS (Reference Match)
+   ═══════════════════════════════════════════ */
+.section-bg {
+  background-color: #14151D;
+}
+
+.section-bg-alt {
+  background: linear-gradient(180deg, #14151D 0%, #1E2029 50%, #14151D 100%);
+}
+
+/* Section divider subtle gradient transition */
+.section-divider-top {
+  background: linear-gradient(180deg, transparent 0%, #14151D 100%);
+  height: 60px;
+  margin-top: -60px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ═══════════════════════════════════════════
+   NAVIGATION (Reference Match)
+   ═══════════════════════════════════════════ */
+.nav-sticky {
+  background-color: #1E2029;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 @layer base {
@@ -188,4 +354,11 @@ input[type="number"] {
   .border-gold {
     border-color: var(--gold);
   }
+}
+
+/* ═══════════════════════════════════════════
+   SMOOTH TRANSITIONS (Reference Match)
+   ═══════════════════════════════════════════ */
+.transition-ref {
+  transition: all 0.3s ease;
 }

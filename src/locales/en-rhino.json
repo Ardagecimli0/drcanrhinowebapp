@@ -25,7 +25,8 @@
     },
     "beforeAfter": {
         "titleLine1": "Check Out These Amazing",
-        "titleLine2": "'Before & After' Transformations!",
+        "titleLine2": "Before & After",
+        "titleLine3": "Transformations!",
         "description": "Explore the natural transformations achieved through the expertise of Op. Dr. Can Kalkavan.",
         "previous": "Previous",
         "next": "Next",
@@ -217,8 +218,8 @@
         ]
     },
     "whyDoctor": {
-        "titleLine1": "Why Choose Op. Dr.",
-        "titleLine2": "Can Kalkavan for",
+        "titleLine1": "Why Choose Op. Dr. Can",
+        "titleLine2": "Kalkavan for",
         "titleLine3": "Rhinoplasty?",
         "features": [
             {
@@ -244,7 +245,7 @@
         ]
     },
     "whyTurkey": {
-        "title": "Why Choose Turkey for Your Rhinoplasty?",
+        "title": "Why Choose\nTurkey for Your\nRhinoplasty?",
         "reasons": [
             {
                 "title": "Affordable Prices:",

@@ -31,11 +31,11 @@ export default function CookieConsent() {
     if (!isVisible) return null;
 
     return (
-        <div className="fixed bottom-4 left-4 z-50 max-w-sm bg-white rounded-lg shadow-2xl border border-gray-200 p-6 animate-fade-in">
+        <div className="fixed bottom-4 left-4 z-50 max-w-sm bg-[#1a1b26] rounded-2xl shadow-2xl border border-white/10 p-6 animate-fade-in">
             {/* Close button */}
             <button
                 onClick={() => setIsVisible(false)}
-                className="absolute top-3 right-3 w-7 h-7 flex items-center justify-center rounded-full bg-[#1e3a5f] text-white hover:bg-[#2a4a6f] transition-colors"
+                className="absolute top-3 right-3 w-7 h-7 flex items-center justify-center rounded-full bg-[#14151D] text-white hover:bg-[#CBB089]/20 transition-colors border border-white/10"
                 aria-label="Close"
             >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -44,12 +44,12 @@ export default function CookieConsent() {
             </button>
 
             {/* Title */}
-            <h3 className="text-lg font-bold text-gray-900 mb-3 pr-8">
+            <h3 className="text-lg font-bold text-white mb-3 pr-8">
                 {t("cookieConsent.title")}
             </h3>
 
             {/* Description */}
-            <p className="text-sm text-gray-600 mb-5 leading-relaxed">
+            <p className="text-sm text-gray-400 mb-5 leading-relaxed">
                 {t("cookieConsent.description")}
             </p>
 
@@ -57,13 +57,13 @@ export default function CookieConsent() {
             <div className="flex gap-3">
                 <button
                     onClick={handleAccept}
-                    className="flex-1 px-4 py-2.5 bg-[#1e3a5f] text-white text-sm font-medium rounded-md hover:bg-[#2a4a6f] transition-colors"
+                    className="flex-1 px-4 py-2.5 btn-green text-white text-sm font-medium rounded-lg"
                 >
                     {t("cookieConsent.accept")}
                 </button>
                 <button
                     onClick={handleViewPreferences}
-                    className="flex-1 px-4 py-2.5 bg-white text-gray-700 text-sm font-medium rounded-md border border-gray-300 hover:bg-gray-50 transition-colors"
+                    className="flex-1 px-4 py-2.5 bg-transparent text-gray-300 text-sm font-medium rounded-lg border border-white/20 hover:bg-white/5 transition-colors"
                 >
                     {t("cookieConsent.viewPreferences")}
                 </button>

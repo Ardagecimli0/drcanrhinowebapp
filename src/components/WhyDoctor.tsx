@@ -12,22 +12,22 @@ export default function WhyDoctor() {
   const features = tArray < Feature > ("whyDoctor.features");
 
   return (
-    <section className="py-16 bg-[#0c1015]">
+    <section className="py-20 bg-[#14151D]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Features */}
           <div>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-8 leading-tight whitespace-pre-line">
               {t("whyDoctor.titleLine1")}<br />
               {t("whyDoctor.titleLine2")}<br />
               {t("whyDoctor.titleLine3")}
             </h2>
-            <div className="w-16 h-1 bg-[#c9a96e] mb-8" />
+            <div className="w-16 h-1 bg-[#CBB089] mb-8" />
 
             <div className="space-y-4">
               {features.map((feature, index) => (
-                <p key={index} className="text-gray-300 text-sm">
-                  <span className="text-[#c9a96e] font-semibold">
+                <p key={index} className="text-gray-300 text-sm md:text-base border-l-2 border-transparent pl-2 transition-all duration-300 hover:border-[#CBB089] hover:translate-x-3 cursor-pointer">
+                  <span className="text-[#CBB089] font-semibold">
                     {feature.label}
                   </span>{" "}
                   {feature.text}
@@ -49,13 +49,13 @@ export default function WhyDoctor() {
           </div>
 
           {/* Right Side - YouTube Video */}
-          <div className="relative aspect-video">
+          <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10">
             <iframe
               src="https://www.youtube.com/embed/q0ndLJw8zH8"
               title="Dr. Can Kalkavan"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="w-full h-full rounded-xl"
+              className="w-full h-full"
             />
           </div>
         </div>

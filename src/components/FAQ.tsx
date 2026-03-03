@@ -9,14 +9,14 @@ interface FAQItem {
 }
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState < number | null > (null);
   const { t, tArray } = useTranslation();
-  const faqs = tArray<FAQItem>("faq.questions");
+  const faqs = tArray < FAQItem > ("faq.questions");
 
   return (
-    <section className="py-16 bg-[#252d38]">
+    <section className="py-20 bg-[#1a1b26]">
       <div className="max-w-3xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#c9a96e] text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#CBB089] text-center mb-12">
           {t("faq.title")}
         </h2>
 
@@ -24,14 +24,14 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border-b border-gray-600"
+              className="border-b border-white/10"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full py-4 flex items-center justify-between text-left"
               >
                 <span className="text-white font-medium">{faq.question}</span>
-                <span className="text-[#c9a96e] text-2xl">
+                <span className="text-[#CBB089] text-2xl">
                   {openIndex === index ? "−" : "+"}
                 </span>
               </button>

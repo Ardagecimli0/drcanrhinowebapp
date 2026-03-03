@@ -43,7 +43,7 @@ export default function ThankYouClient({ slug }: { slug: string }) {
 
                 <div className="mt-12">
                     <a
-                        href="https://api.whatsapp.com/send/?phone=905467633721&text&type=phone_number&app_absent=0"
+                        href="https://api.whatsapp.com/send/?phone=905467633630&text&type=phone_number&app_absent=0"
                         className="inline-block px-8 py-4 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-green-500/20"
                     >
                         {t('thankYou.contactUs')}

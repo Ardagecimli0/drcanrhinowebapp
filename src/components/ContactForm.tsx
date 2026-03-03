@@ -37,6 +37,13 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    const languageNames: Record<string, string> = {
+      en: "English", de: "German", fr: "French", it: "Italian",
+      ar: "Arabic", tr: "Turkish", es: "Spanish", nl: "Dutch",
+      pt: "Portuguese", sv: "Swedish", ru: "Russian"
+    };
+    const langName = languageNames[locale.toLowerCase()] || locale.toUpperCase();
+
     // Prepare the data to send to the API
     const slug = locale;
     const payload = {
@@ -44,12 +51,13 @@ export default function ContactForm() {
       phone: `${countryCode}${phone}`,
       email: email,
       lead_source: "Google/Web Form",
-      language: locale.toUpperCase(),
-      source_language: locale.toUpperCase(),
+      language: langName,
+      source_language: langName,
+      country: countryNames[selectedIso] || selectedIso,
       ip: "",
-      doctor: "Dr. Can Kalkavan",
-      interest: ["Rhinoplasty"],
-      procedure: [],
+      doctor: "Op. Dr. Can Kalkavan",
+      interest: ["Aesthetics"],
+      procedure: ["Rhinoplasty"],
       utm_source: "",
       utm_medium: "",
       utm_keyword: "",
@@ -86,26 +94,23 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-16 bg-[#0c1015]">
-      {/* Custom styles for react-phone-input-2 */}
-
-
+    <section id="contact-form" className="pt-8 pb-16 md:py-[100px] bg-[#14151D]">
       <div className="max-w-6xl mx-auto px-4">
         {/* Outer container with border */}
-        <div className="rounded-3xl border border-gray-700/50 p-8 md:p-12 bg-[#151b23]/50">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="rounded-3xl border border-white/10 p-8 md:p-12 bg-[#1a1b26]/50">
+          <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left Side - Form */}
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+            <div className="w-full text-center lg:text-left">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-2">
                 {t("contactForm.title")}
               </h2>
               <p className="text-gray-400 mb-8 text-sm">
                 {t("contactForm.subtitle")}
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4 text-left">
                 {/* Form container with border */}
-                <div className="bg-[#1c2530] rounded-xl p-6 border border-gray-600/50 space-y-4">
+                <div className="bg-[#1e2030] rounded-xl p-6 border border-white/10 space-y-4">
                   {/* Name Input */}
                   <div className="relative">
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 z-10">
@@ -119,7 +124,7 @@ export default function ContactForm() {
                       placeholder={t("contactForm.namePlaceholder")}
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full pl-12 pr-4 py-3 rounded-lg bg-[#0c1015] border border-gray-700 text-white placeholder-gray-500 focus:border-[#25D366] focus:outline-none transition-colors"
+                      className="w-full pl-12 pr-4 py-3 rounded-lg bg-[#14151D] border border-gray-700/50 text-white placeholder-gray-500 focus:border-[#CBB089] focus:outline-none transition-colors"
                       required
                     />
                   </div>
@@ -128,7 +133,7 @@ export default function ContactForm() {
                   <div className="flex gap-3">
                     <div className="relative w-[140px] flex-shrink-0 group">
                       {/* Visual Fake Input (Background & Border) */}
-                      <div className="absolute inset-0 bg-[#0c1015] border border-gray-700 rounded-lg group-focus-within:border-[#25D366] transition-colors pointer-events-none z-10 flex items-center pl-12 pr-8 text-white">
+                      <div className="absolute inset-0 bg-[#14151D] border border-gray-700/50 rounded-lg group-focus-within:border-[#CBB089] transition-colors pointer-events-none z-10 flex items-center pl-12 pr-8 text-white">
                         {countryToDialCode[selectedIso]}
                       </div>
 
@@ -160,7 +165,7 @@ export default function ContactForm() {
                         className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-30 appearance-none bg-transparent"
                       >
                         {Object.keys(countryToDialCode).sort().map((iso) => (
-                          <option key={iso} value={iso} className="bg-[#0c1015] text-white">
+                          <option key={iso} value={iso} className="bg-[#14151D] text-white">
                             {countryNames[iso] || iso} ({countryToDialCode[iso]})
                           </option>
                         ))}
@@ -177,7 +182,7 @@ export default function ContactForm() {
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         placeholder={t("contactForm.phonePlaceholder")}
-                        className="w-full pl-10 pr-4 py-3 rounded-lg bg-[#0c1015] border border-gray-700 text-white placeholder-gray-500 focus:border-[#25D366] focus:outline-none transition-colors"
+                        className="w-full pl-10 pr-4 py-3 rounded-lg bg-[#14151D] border border-gray-700/50 text-white placeholder-gray-500 focus:border-[#CBB089] focus:outline-none transition-colors"
                       />
                     </div>
                   </div>
@@ -195,7 +200,7 @@ export default function ContactForm() {
                       placeholder={t("contactForm.emailPlaceholder")}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full pl-12 pr-4 py-3 rounded-lg bg-[#0c1015] border border-gray-700 text-white placeholder-gray-500 focus:border-[#25D366] focus:outline-none transition-colors"
+                      className="w-full pl-12 pr-4 py-3 rounded-lg bg-[#14151D] border border-gray-700/50 text-white placeholder-gray-500 focus:border-[#CBB089] focus:outline-none transition-colors"
                       required
                     />
                   </div>
@@ -203,7 +208,7 @@ export default function ContactForm() {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full bg-[#25D366] hover:bg-[#20BD5A] py-4 rounded-lg text-white font-bold text-lg transition-colors"
+                    className="w-full btn-green py-4 rounded-lg text-white font-bold text-lg"
                   >
                     {t("common.submit")}
                   </button>
@@ -212,9 +217,9 @@ export default function ContactForm() {
             </div>
 
             {/* Right Side - Doctor Images */}
-            <div className="relative h-[400px] md:h-[450px]">
+            <div className="relative w-full flex justify-center lg:justify-end lg:h-[450px]">
               {/* Main Doctor Image */}
-              <div className="absolute top-0 right-0 w-[280px] md:w-[320px] h-[350px] md:h-[400px] rounded-2xl overflow-hidden border-4 border-gray-700/50 shadow-2xl group cursor-pointer transition-all duration-300 hover:shadow-[#c9a96e]/20 hover:shadow-2xl">
+              <div className="relative w-[300px] md:w-[320px] h-[380px] md:h-[400px] rounded-2xl overflow-hidden group cursor-pointer transition-all duration-300 md:border md:border-white/10 hover:shadow-[#CBB089]/20 hover:shadow-2xl">
                 <Image
                   src="/images/contact-form-bg.webp"
                   alt="Dr. Can Kalkavan"
@@ -222,8 +227,6 @@ export default function ContactForm() {
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
-
-
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ const logos = [
 
 export default function PressLogos() {
   return (
-    <section className="py-8 bg-[#0c1015] overflow-hidden border-y border-gray-800">
+    <section className="py-8 bg-[#14151D] overflow-hidden border-y border-white/10">
       <div className="flex animate-marquee">
         {[...logos, ...logos, ...logos, ...logos].map((logo, index) => (
           <div key={index} className="flex-shrink-0 mx-12">

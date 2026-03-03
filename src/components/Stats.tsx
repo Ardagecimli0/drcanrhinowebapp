@@ -18,33 +18,66 @@ export default function Stats() {
   const { t, tObject } = useTranslation();
 
   const stats: Stat[] = [
-    tObject<Stat>("stats.operations"),
-    tObject<Stat>("stats.years"),
-    tObject<Stat>("stats.recommendation"),
-    tObject<Stat>("stats.satisfaction"),
+    tObject < Stat > ("stats.operations"),
+    tObject < Stat > ("stats.years"),
+    tObject < Stat > ("stats.recommendation"),
+    tObject < Stat > ("stats.satisfaction"),
   ];
 
   return (
-    <section className="py-16 bg-[#0c1015]">
+    <section className="pt-16 pb-8 md:py-[100px]" style={{ backgroundColor: '#14151D' }}>
       <div className="max-w-7xl mx-auto px-6">
-        {/* 'items-stretch' sayesinde tüm kartlar en uzun olanın boyuna eşitlenir */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
           {stats.map((stat, index) => (
             <div key={index} className="relative group flex">
-              {/* Glow Efekti */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#c9a96e]/40 to-[#b08d57]/40 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
+              {/* Glow Effect */}
+              <div
+                className="absolute -inset-1 rounded-[20px] blur opacity-0 group-hover:opacity-100 transition duration-500"
+                style={{
+                  background: 'linear-gradient(to right, rgba(201,169,131,0.3), rgba(168,144,106,0.3))',
+                }}
+              />
 
-              {/* Ana Kart - 'flex-1' tüm kartların iç alanı doldurmasını ve eşitlenmesini sağlar */}
-              <div className="relative flex-1 bg-[#151b23] rounded-2xl p-8 text-center border border-gray-800 transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[#c9a96e]/30 flex flex-col items-center justify-center">
+              {/* Card */}
+              <div
+                className="relative flex-1 text-center transition-all duration-300 group-hover:-translate-y-2 flex flex-col items-center justify-center"
+                style={{
+                  background: '#1E2029',
+                  borderRadius: '20px',
+                  padding: '40px 32px',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(201, 169, 131, 0.3)';
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                }}
+              >
                 <img
                   src={statIcons[index]}
                   alt=""
                   className="w-14 h-14 mb-6 opacity-80 group-hover:opacity-100 transition-opacity"
                 />
-                <p className="text-4xl font-bold text-[#c9a96e] mb-4">
+                <p
+                  className="mb-4"
+                  style={{
+                    color: '#C9A983',
+                    fontSize: '36px',
+                    fontWeight: 800,
+                    lineHeight: '1.1',
+                  }}
+                >
                   {stat.value}
                 </p>
-                <p className="text-gray-400 text-sm leading-relaxed font-medium">
+                <p
+                  className="font-medium"
+                  style={{
+                    color: 'rgba(156, 163, 175, 1)',
+                    fontSize: '14px',
+                    lineHeight: '1.6',
+                  }}
+                >
                   {stat.label}
                 </p>
               </div>

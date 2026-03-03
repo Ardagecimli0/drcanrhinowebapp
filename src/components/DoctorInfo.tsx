@@ -9,19 +9,19 @@ interface Role {
 
 export default function DoctorInfo() {
   const { t, tArray } = useTranslation();
-  const roles = tArray<Role>("doctorInfo.roles");
+  const roles = tArray < Role > ("doctorInfo.roles");
 
   return (
-    <section className="py-16 bg-gradient-to-b from-[#1c2530] to-[#151b23]">
+    <section className="py-20 bg-[#14151D]">
       <div className="max-w-7xl mx-auto px-4">
         {/* Doctor Video */}
-        <div className="max-w-2xl mx-auto mb-12 aspect-video group cursor-pointer">
+        <div className="max-w-2xl mx-auto mb-12 aspect-video group cursor-pointer rounded-2xl overflow-hidden border border-white/10">
           <iframe
             src="https://www.youtube.com/embed/FCV3mxonrkw"
             title="Dr. Can Kalkavan"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="w-full h-full rounded-xl transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-[#c9a96e]/30"
+            className="w-full h-full transition-all duration-300 group-hover:scale-105"
           />
         </div>
 
@@ -29,7 +29,7 @@ export default function DoctorInfo() {
         <div className="grid md:grid-cols-3 gap-8 text-center mb-12">
           {roles.map((role, index) => (
             <div key={index}>
-              <h3 className="text-[#c9a96e] font-semibold text-lg mb-2">
+              <h3 className="text-[#CBB089] font-semibold text-lg mb-2">
                 {role.title}
               </h3>
               <p className="text-gray-400 text-sm">{role.description}</p>
@@ -42,15 +42,15 @@ export default function DoctorInfo() {
           <p className="text-xl text-white mb-2">
             {t("doctorInfo.planYourJourney")}
           </p>
-          <p className="text-2xl text-[#c9a96e] font-bold mb-6">
+          <p className="text-2xl text-[#CBB089] font-bold mb-6">
             {t("common.doctorName")}
           </p>
 
           {/* Mobile Layout - Vertical */}
           <div className="flex md:hidden flex-col items-center gap-3">
             <a
-              href="#"
-              className="inline-flex items-center justify-center gap-2 w-full max-w-xs px-8 py-4 rounded-full bg-[#c9a96e] text-[#0c1015] font-semibold hover:bg-[#b8986e] transition"
+              href="#contact-form"
+              className="inline-flex items-center justify-center gap-2 w-full max-w-xs px-8 py-4 rounded-full bg-[#CBB089] text-[#14151D] font-semibold hover:bg-[#b8986e] transition"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
@@ -77,8 +77,8 @@ export default function DoctorInfo() {
           {/* Desktop Layout - Horizontal */}
           <div className="hidden md:flex flex-wrap justify-center gap-4">
             <a
-              href="#"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-gray-600 text-white font-semibold hover:bg-white/5 transition"
+              href="#contact-form"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/20 text-white font-semibold hover:bg-white/5 transition"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />

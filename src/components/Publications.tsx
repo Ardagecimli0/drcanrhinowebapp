@@ -7,23 +7,23 @@ export default function Publications() {
   const { t } = useTranslation();
 
   return (
-    <section className="py-16 md:py-24 bg-[#0c1015] overflow-hidden">
+    <section className="pt-10 pb-16 md:py-20 bg-[#14151D] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-4 items-center">
+        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-8 items-center">
           {/* Left Column - Text Content */}
-          <div className="text-left lg:pr-8">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+          <div className="text-left">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-[1.15]">
               {t("publications.title")}
             </h2>
-            <div className="w-12 h-0.5 bg-gray-600 mb-6" />
-            <p className="text-gray-400 text-base md:text-lg mb-8 max-w-md leading-relaxed">
+            <div className="w-20 h-1 bg-[#CBB089] mb-8" />
+            <p className="text-gray-400 text-base md:text-lg mb-10 max-w-lg leading-relaxed">
               {t("publications.description")}
             </p>
             <a
               href="https://api.whatsapp.com/send?phone=905467633630&text=What%20are%20the%20options%20and%20pricing%20for%20rhinoplasty"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] px-8 py-4 rounded-full text-white font-semibold transition-colors"
+              className="inline-flex items-center gap-2 btn-green px-10 py-4 rounded-full text-white font-semibold transition-transform hover:scale-105"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -38,14 +38,14 @@ export default function Publications() {
             </a>
           </div>
 
-          {/* Right Column - Publications Image */}
-          <div className="relative lg:-mr-16 xl:-mr-24 cursor-pointer group">
+          {/* Right Column - Publications Image (bleeds to the right edge) */}
+          <div className="relative lg:-mr-24 xl:-mr-32 2xl:-mr-40 cursor-pointer group">
             <Image
               src="/images/publications.png"
               alt="Publications in prestigious medical journals"
-              width={600}
+              width={700}
               height={600}
-              className="w-full h-auto transition-transform duration-300 group-hover:scale-110"
+              className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
             />
           </div>
         </div>
