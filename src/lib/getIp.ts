@@ -40,10 +40,10 @@ export const countryNames: Record<string, string> = {
 
 export async function fetchCountryByIP() {
     try {
-        const response = await fetch("http://ip-api.com/json/?fields=countryCode");
+        const response = await fetch("https://ipapi.co/json/");
         if (response.ok) {
             const data = await response.json();
-            const countryCode = data.countryCode;
+            const countryCode = data.country_code;
             if (countryCode && countryToDialCode[countryCode]) {
                 return {
                     countryCode: countryCode,

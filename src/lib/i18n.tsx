@@ -106,15 +106,15 @@ export function I18nProvider({ children }: { children: ReactNode }) {
             const timeoutId = setTimeout(() => controller.abort(), 3000);
 
             try {
-                const response = await fetch("http://ip-api.com/json/?fields=countryCode", {
+                const response = await fetch("https://ipapi.co/json/", {
                     signal: controller.signal
                 });
                 clearTimeout(timeoutId);
 
                 if (response.ok) {
                     const data = await response.json();
-                    if (data.countryCode) {
-                        const detectedLocale = countryToLocale[data.countryCode] || "en";
+                    if (data.country_code) {
+                        const detectedLocale = countryToLocale[data.country_code] || "en";
                         setLocale(detectedLocale);
                     }
                 }
