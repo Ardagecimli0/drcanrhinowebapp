@@ -25,6 +25,14 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
 body {
   font-family: 'Rubik', sans-serif;
   background-color: var(--background);
@@ -32,6 +40,23 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+section {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.page-wrapper {
+  overflow-x: hidden;
+  overflow-x: clip;
+  /* Modern browsers */
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1,
@@ -313,6 +338,8 @@ input[type="number"] {
    ═══════════════════════════════════════════ */
 .section-bg {
   background-color: #14151D;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .section-bg-alt {

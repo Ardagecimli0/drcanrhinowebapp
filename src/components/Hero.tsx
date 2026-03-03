@@ -12,6 +12,7 @@ export default function Hero() {
   const [email, setEmail] = useState("");
   const [countryCode, setCountryCode] = useState("+90");
   const [selectedIso, setSelectedIso] = useState("TR");
+  const [countryName, setCountryName] = useState("Turkey");
   const [isVisible, setIsVisible] = useState(false);
   const { t, locale } = useTranslation();
 
@@ -27,6 +28,7 @@ export default function Hero() {
       if (result) {
         setCountryCode(result.dialCode);
         setSelectedIso(result.countryCode);
+        setCountryName(result.countryName);
       }
     };
     initCountry();
@@ -35,6 +37,7 @@ export default function Hero() {
   const handleCountryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newIso = e.target.value;
     setSelectedIso(newIso);
+    setCountryName(countryNames[newIso] || newIso);
     if (countryToDialCode[newIso]) {
       setCountryCode(countryToDialCode[newIso]);
     }
@@ -59,7 +62,7 @@ export default function Hero() {
       lead_source: "Google/Web Form",
       language: langName,
       source_language: langName,
-      country: countryNames[selectedIso] || selectedIso,
+      country: countryName,
       ip: "",
       doctor: "Op. Dr. Can Kalkavan",
       interest: ["Aesthetics"],
@@ -242,7 +245,7 @@ export default function Hero() {
             {/* Title */}
             <div className="text-center flex flex-col items-center">
               <h1
-                className="text-white mb-3 leading-tight whitespace-nowrap"
+                className="text-white mb-3 leading-tight lg:whitespace-nowrap"
                 style={{
                   fontSize: 'clamp(28px, 4vw, 40px)',
                   fontWeight: 700,

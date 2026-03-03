@@ -12,6 +12,7 @@ export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [countryCode, setCountryCode] = useState("+90");
   const [selectedIso, setSelectedIso] = useState("TR");
+  const [countryName, setCountryName] = useState("Turkey");
   const { t, locale } = useTranslation();
 
   // Auto-detect country from IP address
@@ -21,6 +22,7 @@ export default function ContactForm() {
       if (result) {
         setCountryCode(result.dialCode);
         setSelectedIso(result.countryCode);
+        setCountryName(result.countryName);
       }
     };
     initCountry();
@@ -29,6 +31,7 @@ export default function ContactForm() {
   const handleCountryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newIso = e.target.value;
     setSelectedIso(newIso);
+    setCountryName(countryNames[newIso] || newIso);
     if (countryToDialCode[newIso]) {
       setCountryCode(countryToDialCode[newIso]);
     }
@@ -53,7 +56,7 @@ export default function ContactForm() {
       lead_source: "Google/Web Form",
       language: langName,
       source_language: langName,
-      country: countryNames[selectedIso] || selectedIso,
+      country: countryName,
       ip: "",
       doctor: "Op. Dr. Can Kalkavan",
       interest: ["Aesthetics"],

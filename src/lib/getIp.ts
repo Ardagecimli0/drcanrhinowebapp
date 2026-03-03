@@ -47,7 +47,8 @@ export async function fetchCountryByIP() {
             if (countryCode && countryToDialCode[countryCode]) {
                 return {
                     countryCode: countryCode,
-                    dialCode: countryToDialCode[countryCode]
+                    dialCode: countryToDialCode[countryCode],
+                    countryName: countryNames[countryCode] || countryCode
                 };
             }
         }
