@@ -58,8 +58,10 @@ export default function Techniques() {
             ][index] || "float-icon";
 
             return (
-              <div
+              <a
                 key={index}
+                href={`https://api.whatsapp.com/send?phone=905467633630&text=${encodeURIComponent(t("common.whatsappMessage"))}`}
+                target="_self"
                 className="flex flex-col items-center text-center group cursor-pointer"
               >
                 {/* Circular icon container matching reference */}
@@ -91,7 +93,7 @@ export default function Techniques() {
                 >
                   {technique}
                 </p>
-              </div>
+              </a>
             );
           })}
         </div>
