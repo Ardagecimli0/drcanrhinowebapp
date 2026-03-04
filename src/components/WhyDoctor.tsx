@@ -9,7 +9,7 @@ interface Feature {
 
 export default function WhyDoctor() {
   const { t, tArray } = useTranslation();
-  const features = tArray < Feature > ("whyDoctor.features");
+  const features = tArray<Feature>("whyDoctor.features");
 
   return (
     <section className="pt-10 pb-20 bg-[#14151D]">
@@ -36,7 +36,7 @@ export default function WhyDoctor() {
             </div>
 
             <a
-              href="https://api.whatsapp.com/send?phone=905467633630&text=What%20are%20the%20options%20and%20pricing%20for%20rhinoplasty"
+              href={`https://api.whatsapp.com/send?phone=905467633630&text=${encodeURIComponent(t("common.whatsappMessage"))}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 btn-green px-8 py-4 rounded-full text-white font-semibold mt-8"

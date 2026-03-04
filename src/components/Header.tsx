@@ -46,7 +46,7 @@ export default function Header() {
 
         {/* CTA Button */}
         <a
-          href="https://api.whatsapp.com/send?phone=905467633630&text=What%20are%20the%20options%20and%20pricing%20for%20rhinoplasty"
+          href={`https://api.whatsapp.com/send?phone=905467633630&text=${encodeURIComponent(t("common.whatsappMessage"))}`}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-green text-white font-bold flex items-center justify-center transition-all duration-300 whitespace-nowrap"

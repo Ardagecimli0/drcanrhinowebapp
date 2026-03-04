@@ -11,9 +11,9 @@ export default function Packages() {
   const { t, tObject } = useTranslation();
 
   const packages: Package[] = [
-    tObject < Package > ("packages.openRhinoplasty"),
-    tObject < Package > ("packages.pushDownLetDown"),
-    tObject < Package > ("packages.piezo"),
+    tObject<Package>("packages.openRhinoplasty"),
+    tObject<Package>("packages.pushDownLetDown"),
+    tObject<Package>("packages.piezo"),
   ];
 
   return (
@@ -61,7 +61,7 @@ export default function Packages() {
                 {pkg.features.map((feature, i) => (
                   <li key={i} className="pb-4 border-b border-white/10 last:border-0 group">
                     <a
-                      href="https://api.whatsapp.com/send?phone=905467633630&text=What%20are%20the%20options%20and%20pricing%20for%20rhinoplasty"
+                      href={`https://api.whatsapp.com/send?phone=905467633630&text=${encodeURIComponent(t("common.whatsappMessage"))}`}
                       className="flex items-start gap-3 text-sm cursor-pointer"
                       style={{ color: 'rgba(209, 213, 219, 1)' }}
                     >
@@ -72,7 +72,7 @@ export default function Packages() {
                 ))}
               </ul>
               <a
-                href="https://api.whatsapp.com/send?phone=905467633630&text=What%20are%20the%20options%20and%20pricing%20for%20rhinoplasty"
+                href={`https://api.whatsapp.com/send?phone=905467633630&text=${encodeURIComponent(t("common.whatsappMessage"))}`}
                 rel="noopener noreferrer"
                 className="btn-green mt-8 text-white font-semibold text-center flex items-center justify-center gap-2 transition-transform hover:scale-105"
                 style={{

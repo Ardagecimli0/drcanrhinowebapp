@@ -20,7 +20,7 @@ export default function Publications() {
               {t("publications.description")}
             </p>
             <a
-              href="https://api.whatsapp.com/send?phone=905467633630&text=What%20are%20the%20options%20and%20pricing%20for%20rhinoplasty"
+              href={`https://api.whatsapp.com/send?phone=905467633630&text=${encodeURIComponent(t("common.whatsappMessage"))}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 btn-green px-10 py-4 rounded-full text-white font-semibold transition-transform hover:scale-105"

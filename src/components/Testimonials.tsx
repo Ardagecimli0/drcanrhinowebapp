@@ -12,7 +12,7 @@ interface Review {
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { t, tArray } = useTranslation();
-  const testimonials = tArray < Review > ("testimonials.reviews");
+  const testimonials = tArray<Review>("testimonials.reviews");
 
   return (
     <section
@@ -51,7 +51,7 @@ export default function Testimonials() {
               {t("testimonials.description")}
             </p>
             <a
-              href="https://api.whatsapp.com/send?phone=905467633630&text=What%20are%20the%20options%20and%20pricing%20for%20rhinoplasty"
+              href={`https://api.whatsapp.com/send?phone=905467633630&text=${encodeURIComponent(t("common.whatsappMessage"))}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center w-full md:w-auto btn-green text-white font-semibold"

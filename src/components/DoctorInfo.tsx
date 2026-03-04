@@ -9,7 +9,7 @@ interface Role {
 
 export default function DoctorInfo() {
   const { t, tArray } = useTranslation();
-  const roles = tArray < Role > ("doctorInfo.roles");
+  const roles = tArray<Role>("doctorInfo.roles");
 
   return (
     <section className="py-20 bg-[#14151D]">
@@ -62,7 +62,7 @@ export default function DoctorInfo() {
             </a>
             <span className="text-gray-400 text-sm">{t("common.or")}</span>
             <a
-              href="https://api.whatsapp.com/send?phone=905467633630&text=What%20are%20the%20options%20and%20pricing%20for%20rhinoplasty"
+              href={`https://api.whatsapp.com/send?phone=905467633630&text=${encodeURIComponent(t("common.whatsappMessage"))}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 w-full max-w-xs px-8 py-4 rounded-full border-2 border-[#25D366] text-[#25D366] font-semibold hover:bg-[#25D366]/10 transition"
@@ -90,7 +90,7 @@ export default function DoctorInfo() {
             </a>
             <span className="flex items-center text-gray-400">{t("common.or")}</span>
             <a
-              href="https://api.whatsapp.com/send?phone=905467633630&text=What%20are%20the%20options%20and%20pricing%20for%20rhinoplasty"
+              href={`https://api.whatsapp.com/send?phone=905467633630&text=${encodeURIComponent(t("common.whatsappMessage"))}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-[#25D366] text-[#25D366] font-semibold hover:bg-[#25D366]/10 transition"

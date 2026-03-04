@@ -17,10 +17,12 @@ import DoctorInfo from "@/components/DoctorInfo";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+import DynamicTitle from "@/components/DynamicTitle";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#0c1015]">
+      <DynamicTitle />
       <Header />
       <Hero />
       <PressLogos />

@@ -128,7 +128,7 @@ export default function BeforeAfter() {
             </p>
 
             <a
-              href="https://api.whatsapp.com/send?phone=905467633630&text=What%20are%20the%20options%20and%20pricing%20for%20rhinoplasty"
+              href={`https://api.whatsapp.com/send?phone=905467633630&text=${encodeURIComponent(t("common.whatsappMessage"))}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full lg:w-auto inline-flex items-center justify-center gap-2 btn-green text-white font-semibold transition-transform hover:scale-105"

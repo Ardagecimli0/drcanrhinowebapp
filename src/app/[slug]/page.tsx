@@ -17,6 +17,36 @@ import DoctorInfo from "@/components/DoctorInfo";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+import DynamicTitle from "@/components/DynamicTitle";
+import type { Metadata } from "next";
+
+const slugToLocale: Record<string, string> = {
+    "rhinoplasty-in-turkey": "en",
+    "nasenkorrektur-in-der-turkei": "de",
+    "rinoplastia-en-turquia": "es",
+    "rhinoplastie-en-turquie": "fr",
+    "rinoplastica-in-turchia": "it",
+    "rhinoplastyka-w-turcji": "pl",
+};
+
+const localeTitles: Record<string, string> = {
+    en: "Rhinoplasty in Turkey - Op. Dr. Can Kalkavan",
+    de: "Nasenkorrektur in der Türkei - Op. Dr. Can Kalkavan",
+    es: "Rinoplastia en Turquía - Op. Dr. Can Kalkavan",
+    fr: "Rhinoplastie en Turquie - Op. Dr. Can Kalkavan",
+    it: "Rinoplastica in Turchia - Op. Dr. Can Kalkavan",
+    pl: "Rhinoplastyka w Turcji - Lek. med. Can Kalkavan",
+};
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const locale = slugToLocale[slug] || "en";
+    const title = localeTitles[locale] || localeTitles.en;
+
+    return {
+        title,
+    };
+}
 
 export function generateStaticParams() {
     return [
@@ -35,6 +65,7 @@ export default async function LandingPage({ params }: { params: Promise<{ slug: 
     // Render the same content as the main page
     return (
         <main className="min-h-screen bg-[#0c1015]">
+            <DynamicTitle />
             <Header />
             <Hero />
             <PressLogos />

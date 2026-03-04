@@ -195,7 +195,7 @@ export default function Hero() {
 
             {/* Free Consultation Button */}
             <a
-              href="https://api.whatsapp.com/send?phone=905467633630&text=What%20are%20the%20options%20and%20pricing%20for%20rhinoplasty"
+              href={`https://api.whatsapp.com/send?phone=905467633630&text=${encodeURIComponent(t("common.whatsappMessage"))}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-green text-white font-semibold flex items-center gap-3 mt-6"
@@ -406,7 +406,7 @@ export default function Hero() {
 
       {/* WhatsApp Float Button */}
       <a
-        href="https://api.whatsapp.com/send?phone=905467633630&text=What%20are%20the%20options%20and%20pricing%20for%20rhinoplasty"
+        href={`https://api.whatsapp.com/send?phone=905467633630&text=${encodeURIComponent(t("common.whatsappMessage"))}`}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 btn-green rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
